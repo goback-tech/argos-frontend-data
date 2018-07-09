@@ -314,7 +314,7 @@ func createPackage(options linuxPackageOptions) {
 
 	args := []string{
 		"-s", "dir",
-		"--description", "ARGOS",
+		"--description", "argosdatagraph",
 		"-C", packageRoot,
 		"--url", "https://goback.world",
 		"--maintainer", "contact@goback.world",
@@ -333,7 +333,7 @@ func createPackage(options linuxPackageOptions) {
 	}
 	args = append(args, "--name", name)
 
-	description := "GOBACK"
+	description := "goback"
 	if enterprise {
 		description += " Enterprise"
 	}
