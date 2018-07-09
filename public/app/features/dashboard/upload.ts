@@ -4,7 +4,7 @@ var template = `
 <input type="file" id="dashupload" name="dashupload" class="hide"/>
 <label class="btn btn-success" for="dashupload">
   <i class="fa fa-upload"></i>
-  Upload .json File
+  .json 파일 업로드
 </label>
 `;
 
@@ -26,7 +26,7 @@ function uploadDashboardDirective(timer, alertSrv, $location) {
               dash = JSON.parse(e.target.result);
             } catch (err) {
               console.log(err);
-              scope.appEvent('alert-error', ['Import failed', 'JSON -> JS Serialization failed: ' + err.message]);
+              scope.appEvent('alert-error', ['임포트 실패', 'JSON -> JS Serialization failed: ' + err.message]);
               return;
             }
 

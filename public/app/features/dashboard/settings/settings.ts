@@ -55,22 +55,22 @@ export class SettingsCtrl {
 
     if (this.dashboard.meta.canEdit) {
       this.sections.push({
-        title: 'General',
+        title: '일반',
         id: 'settings',
         icon: 'gicon gicon-preferences',
       });
       this.sections.push({
-        title: 'Annotations',
+        title: '주석',
         id: 'annotations',
         icon: 'gicon gicon-annotation',
       });
       this.sections.push({
-        title: 'Variables',
+        title: '변수들',
         id: 'templating',
         icon: 'gicon gicon-variable',
       });
       this.sections.push({
-        title: 'Links',
+        title: '링크',
         id: 'links',
         icon: 'gicon gicon-link',
       });
@@ -78,7 +78,7 @@ export class SettingsCtrl {
 
     if (this.dashboard.id && this.dashboard.meta.canSave) {
       this.sections.push({
-        title: 'Versions',
+        title: '버전',
         id: 'versions',
         icon: 'fa fa-fw fa-history',
       });
@@ -86,7 +86,7 @@ export class SettingsCtrl {
 
     if (this.dashboard.id && this.dashboard.meta.canAdmin) {
       this.sections.push({
-        title: 'Permissions',
+        title: '권한',
         id: 'permissions',
         icon: 'fa fa-fw fa-lock',
       });
@@ -94,14 +94,14 @@ export class SettingsCtrl {
 
     if (this.dashboard.meta.canMakeEditable) {
       this.sections.push({
-        title: 'General',
+        title: '일반',
         icon: 'gicon gicon-preferences',
         id: 'make_editable',
       });
     }
 
     this.sections.push({
-      title: 'JSON Model',
+      title: 'JSON 모델',
       id: 'dashboard_json',
       icon: 'gicon gicon-json',
     });
@@ -187,7 +187,7 @@ export class SettingsCtrl {
     });
 
     if (alerts > 0) {
-      confirmText = 'DELETE';
+      confirmText = '삭제';
       text2 = `This dashboard contains ${alerts} alerts. Deleting this dashboard will also delete those alerts`;
     }
 

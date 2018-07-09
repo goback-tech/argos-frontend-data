@@ -1,7 +1,7 @@
 <div class="gf-form-group">
 	<div class="gf-form-inline">
 		<div class="gf-form">
-			<span class="gf-form-label width-10">Mode</span>
+			<span class="gf-form-label width-10">모드</span>
 			<div class="gf-form-select-wrapper max-width-10">
 				<select class="gf-form-input" ng-model="ctrl.panel.mode" ng-options="f for f in ctrl.modes" ng-change="ctrl.refresh()"></select>
 			</div>
@@ -24,16 +24,16 @@
 		</div>
 
 		<div class="gf-form">
-			<span class="gf-form-label">Tags</span>
+			<span class="gf-form-label">태그</span>
 
-			<bootstrap-tagsinput ng-model="ctrl.panel.tags" tagclass="label label-tag" placeholder="add tags" on-tags-updated="ctrl.refresh()">
+			<bootstrap-tagsinput ng-model="ctrl.panel.tags" tagclass="label label-tag" placeholder="태그 추가" on-tags-updated="ctrl.refresh()">
 			</bootstrap-tagsinput>
 		</div>
 	</div>
 
 	<div class="gf-form-inline">
 		<div class="gf-form">
-			<span class="gf-form-label width-10">Limit number to</span>
+			<span class="gf-form-label width-10">제한 숫자</span>
 			<input class="gf-form-input" type="number" ng-model="ctrl.panel.limit" ng-model-onblur ng-change="ctrl.refresh()">
 		</div>
 	</div>

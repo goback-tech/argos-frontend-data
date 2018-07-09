@@ -2,7 +2,7 @@
 	<div class="modal-header">
 		<h2 class="modal-header-title">
 			<i class="fa fa-info-circle"></i>
-			<span class="p-l-1">Inspector</span>
+			<span class="p-l-1">인스펙터</span>
 		</h2>
 
 		<ul class="gf-tabs">
@@ -23,7 +23,7 @@
 		</div>
 
 		<div ng-if="editor.index == 1">
-			<h5 class="section-heading">Request details</h5>
+			<h5 class="section-heading">상세 요청</h5>
 			<table class="filter-table gf-form-group">
 				<tr>
 					<td>Url</td>
@@ -43,7 +43,7 @@
 				</tr>
 			</table>
 
-			<h5 class="section-heading">Request parameters</h5>
+			<h5 class="section-heading">파라미터 요청</h5>
 			<table class="filter-table">
 				<tr ng-repeat="param in request_parameters">
 					<td>
@@ -65,7 +65,7 @@
 
 		<div ng-if="editor.index == 3">
 
-			<label>Message:</label>
+			<label>메시지:</label>
 <pre>
 {{message}}
 </pre>

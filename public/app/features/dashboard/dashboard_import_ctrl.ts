@@ -35,7 +35,7 @@ export class DashboardImportCtrl {
     this.autoGenerateUid = true;
     this.autoGenerateUidValue = 'auto-generated';
     this.folderId = $routeParams.folderId ? Number($routeParams.folderId) || 0 : null;
-    this.initialFolderTitle = 'Select a folder';
+    this.initialFolderTitle = '폴더 선택';
 
     // check gnetId in url
     if ($routeParams.gnetId) {

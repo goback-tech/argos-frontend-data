@@ -56,7 +56,7 @@ export class FolderPickerCtrl {
       }
 
       if (this.isEditor && this.enableCreateNew && query === '') {
-        result.unshift({ title: '-- New Folder --', id: -1 });
+        result.unshift({ title: '-- 새 폴더 --', id: -1 });
       }
 
       if (this.enableReset && query === '' && this.initialTitle !== '') {
@@ -101,7 +101,7 @@ export class FolderPickerCtrl {
     }
 
     return this.backendSrv.createFolder({ title: this.newFolderName }).then(result => {
-      appEvents.emit('alert-success', ['Folder Created', 'OK']);
+      appEvents.emit('alert-success', ['폴더 생성됨', '확인']);
 
       this.closeCreateFolder();
       this.folder = {

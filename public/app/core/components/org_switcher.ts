@@ -19,8 +19,8 @@ const template = `
     <table class="filter-table form-inline">
 			<thead>
 				<tr>
-					<th>Name</th>
-					<th>Role</th>
+					<th>이름</th>
+					<th>역할</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -30,10 +30,10 @@ const template = `
 					<td>{{org.role}}</td>
 					<td class="text-right">
 						<span class="btn btn-primary btn-mini" ng-show="org.orgId === ctrl.currentOrgId">
-							Current
+							현재
 						</span>
 						<a ng-click="ctrl.setUsingOrg(org)" class="btn btn-inverse btn-mini" ng-show="org.orgId !== ctrl.currentOrgId">
-							Switch to
+							변경
 						</a>
 					</td>
 				</tr>

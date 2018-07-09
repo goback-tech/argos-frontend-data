@@ -62,10 +62,10 @@ export class FolderSettingsCtrl {
     }
 
     appEvents.emit('confirm-modal', {
-      title: 'Delete',
-      text: `Do you want to delete this folder and all its dashboards?`,
+      title: '삭제',
+      text: `이 폴더와 대쉬보드를 삭제하시겠습니까?`,
       icon: 'fa-trash',
-      yesText: 'Delete',
+      yesText: '삭제',
       onConfirm: () => {
         return this.backendSrv.deleteFolder(this.uid).then(() => {
           appEvents.emit('alert-success', ['Folder Deleted', `${this.folder.title} has been deleted`]);
@@ -80,7 +80,7 @@ export class FolderSettingsCtrl {
       err.isHandled = true;
 
       appEvents.emit('confirm-modal', {
-        title: 'Conflict',
+        title: '충돌',
         text: 'Someone else has updated this folder.',
         text2: 'Would you still like to save this folder?',
         yesText: 'Save & Overwrite',

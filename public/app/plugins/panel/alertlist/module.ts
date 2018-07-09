@@ -171,7 +171,7 @@ class AlertListPanel extends PanelCtrl {
   }
 
   onInitEditMode() {
-    this.addEditorTab('Options', 'public/app/plugins/panel/alertlist/editor.html');
+    this.addEditorTab('옵션', 'public/app/plugins/panel/alertlist/editor.html');
   }
 }
 

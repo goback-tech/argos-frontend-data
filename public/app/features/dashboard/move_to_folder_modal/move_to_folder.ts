@@ -18,7 +18,7 @@ export class MoveToFolderCtrl {
   save() {
     return this.backendSrv.moveDashboards(this.dashboards, this.folder).then(result => {
       if (result.successCount > 0) {
-        const header = `Dashboard${result.successCount === 1 ? '' : 's'} Moved`;
+        const header = `대쉬보드${result.successCount === 1 ? '' : 's'} 이동완료`;
         const msg = `${result.successCount} dashboard${result.successCount === 1 ? '' : 's'} moved to ${
           this.folder.title
         }`;
@@ -26,7 +26,7 @@ export class MoveToFolderCtrl {
       }
 
       if (result.totalCount === result.alreadyInFolderCount) {
-        appEvents.emit('alert-error', ['Error', `Dashboards already belongs to folder ${this.folder.title}`]);
+        appEvents.emit('alert-error', ['Error', `대쉬보드가 이미 해당 폴더에 있습니다 ${this.folder.title}`]);
       }
 
       this.dismiss();

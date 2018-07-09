@@ -172,7 +172,7 @@ export class HistoryListCtrl {
 
   restore(version: number) {
     this.$rootScope.appEvent('confirm-modal', {
-      title: 'Restore version',
+      title: '버전 복원',
       text: '',
       text2: `Are you sure you want to restore the dashboard to version ${version}? All unsaved changes will be lost.`,
       icon: 'fa-history',

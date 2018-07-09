@@ -6,7 +6,7 @@ export const permissionOptions = [
   { value: 2, label: 'Edit', description: 'Can add, edit and delete dashboards.' },
   {
     value: 4,
-    label: 'Admin',
+    label: '관리자',
     description: 'Can add/remove permissions and can add, edit and delete dashboards.',
   },
 ];

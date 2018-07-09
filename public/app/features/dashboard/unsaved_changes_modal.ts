@@ -5,7 +5,7 @@ const template = `
   <div class="modal-header">
     <h2 class="modal-header-title">
       <i class="fa fa-exclamation"></i>
-      <span class="p-l-1">Unsaved changes</span>
+      <span class="p-l-1">변경사항이 저장되지 않았습니다</span>
     </h2>
 
     <a class="modal-header-close" ng-click="ctrl.dismiss();">
@@ -16,13 +16,13 @@ const template = `
   <div class="modal-content text-center">
 
     <div class="confirm-modal-text">
-      Do you want to save your changes?
+     변경사항을 저장하시겠습니까?
     </div>
 
     <div class="confirm-modal-buttons">
-      <button type="button" class="btn btn-success" ng-click="ctrl.save()">Save</button>
-      <button type="button" class="btn btn-danger" ng-click="ctrl.discard()">Discard</button>
-      <button type="button" class="btn btn-inverse" ng-click="ctrl.dismiss()">Cancel</button>
+      <button type="button" class="btn btn-success" ng-click="ctrl.save()">저장</button>
+      <button type="button" class="btn btn-danger" ng-click="ctrl.discard()">버리기</button>
+      <button type="button" class="btn btn-inverse" ng-click="ctrl.dismiss()">취소</button>
     </div>
   </div>
 </div>

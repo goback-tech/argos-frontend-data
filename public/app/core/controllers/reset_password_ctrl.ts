@@ -17,7 +17,7 @@ export class ResetPasswordCtrl {
       main: {
         icon: 'gicon gicon-branding',
         text: 'Reset Password',
-        subTitle: 'Reset your Grafana password',
+        subTitle: 'Reset your ARGOS password',
         breadcrumbs: [{ title: 'Login', url: 'login' }],
       },
     };

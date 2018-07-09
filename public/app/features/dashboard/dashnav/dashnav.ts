@@ -14,9 +14,9 @@ export class DashNavCtrl {
 
     if (this.dashboard.meta.isSnapshot) {
       var meta = this.dashboard.meta;
-      this.titleTooltip = 'Created: &nbsp;' + moment(meta.created).calendar();
+      this.titleTooltip = '생성: &nbsp;' + moment(meta.created).calendar();
       if (meta.expires) {
-        this.titleTooltip += '<br>Expires: &nbsp;' + moment(meta.expires).fromNow() + '<br>';
+        this.titleTooltip += '<br>기한: &nbsp;' + moment(meta.expires).fromNow() + '<br>';
       }
     }
   }

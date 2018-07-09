@@ -57,7 +57,7 @@ export class DashboardCtrl implements PanelContainer {
     this.variableSrv
       .init(dashboard)
       // template values failes are non fatal
-      .catch(this.onInitFailed.bind(this, 'Templating init failed', false))
+      .catch(this.onInitFailed.bind(this, '템플릿 초기화 실패', false))
       // continue
       .finally(() => {
         this.dashboard = dashboard;
@@ -76,7 +76,7 @@ export class DashboardCtrl implements PanelContainer {
 
         this.$scope.appEvent('dashboard-initialized', dashboard);
       })
-      .catch(this.onInitFailed.bind(this, 'Dashboard init failed', true));
+      .catch(this.onInitFailed.bind(this, '대쉬보드 초기화 실패', true));
   }
 
   onInitFailed(msg, fatal, err) {
@@ -93,7 +93,7 @@ export class DashboardCtrl implements PanelContainer {
     // protect against  recursive fallbacks
     if (fatal && !this.loadedFallbackDashboard) {
       this.loadedFallbackDashboard = true;
-      this.setupDashboard({ dashboard: { title: 'Dashboard Init failed' } });
+      this.setupDashboard({ dashboard: { title: '대쉬보드 초기화 실패' } });
     }
   }
 
@@ -147,13 +147,13 @@ export class DashboardCtrl implements PanelContainer {
       var text2, confirmText;
 
       if (panel.alert) {
-        text2 = 'Panel includes an alert rule, removing panel will also remove alert rule';
+        text2 = '패널이 알람 을 포함하고 있습니다, 패널 삭제시 알람 규칙도 삭제 됩니다.';
         confirmText = 'YES';
       }
 
       this.$scope.appEvent('confirm-modal', {
         title: 'Remove Panel',
-        text: 'Are you sure you want to remove this panel?',
+        text: '이 패널을 삭제하시겠습니까?',
         text2: text2,
         icon: 'fa-trash',
         confirmText: confirmText,

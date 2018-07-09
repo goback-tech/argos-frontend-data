@@ -3,59 +3,59 @@ import moment from 'moment';
 import * as dateMath from './datemath';
 
 var spans = {
-  s: { display: 'second' },
-  m: { display: 'minute' },
-  h: { display: 'hour' },
-  d: { display: 'day' },
-  w: { display: 'week' },
-  M: { display: 'month' },
-  y: { display: 'year' },
+  s: { display: '초' },
+  m: { display: '분' },
+  h: { display: '시' },
+  d: { display: '일' },
+  w: { display: '주' },
+  M: { display: '월' },
+  y: { display: '년' },
 };
 
 var rangeOptions = [
-  { from: 'now/d', to: 'now/d', display: 'Today', section: 2 },
-  { from: 'now/d', to: 'now', display: 'Today so far', section: 2 },
-  { from: 'now/w', to: 'now/w', display: 'This week', section: 2 },
-  { from: 'now/w', to: 'now', display: 'This week so far', section: 2 },
-  { from: 'now/M', to: 'now/M', display: 'This month', section: 2 },
-  { from: 'now/M', to: 'now', display: 'This month so far', section: 2 },
-  { from: 'now/y', to: 'now/y', display: 'This year', section: 2 },
-  { from: 'now/y', to: 'now', display: 'This year so far', section: 2 },
+  { from: 'now/d', to: 'now/d', display: '오늘', section: 2 },
+  { from: 'now/d', to: 'now', display: '현재까지', section: 2 },
+  { from: 'now/w', to: 'now/w', display: '이번 주', section: 2 },
+  { from: 'now/w', to: 'now', display: '이번주 지금까지', section: 2 },
+  { from: 'now/M', to: 'now/M', display: '이번 달', section: 2 },
+  { from: 'now/M', to: 'now', display: '이번 달 지금까지', section: 2 },
+  { from: 'now/y', to: 'now/y', display: '올해', section: 2 },
+  { from: 'now/y', to: 'now', display: '올해 지금까지', section: 2 },
 
-  { from: 'now-1d/d', to: 'now-1d/d', display: 'Yesterday', section: 1 },
+  { from: 'now-1d/d', to: 'now-1d/d', display: '어제', section: 1 },
   {
     from: 'now-2d/d',
     to: 'now-2d/d',
-    display: 'Day before yesterday',
+    display: '어제 전날',
     section: 1,
   },
   {
     from: 'now-7d/d',
     to: 'now-7d/d',
-    display: 'This day last week',
+    display: '지난 주 오늘',
     section: 1,
   },
-  { from: 'now-1w/w', to: 'now-1w/w', display: 'Previous week', section: 1 },
-  { from: 'now-1M/M', to: 'now-1M/M', display: 'Previous month', section: 1 },
-  { from: 'now-1y/y', to: 'now-1y/y', display: 'Previous year', section: 1 },
+  { from: 'now-1w/w', to: 'now-1w/w', display: '이전 주', section: 1 },
+  { from: 'now-1M/M', to: 'now-1M/M', display: '이전 월', section: 1 },
+  { from: 'now-1y/y', to: 'now-1y/y', display: '이전 해', section: 1 },
 
-  { from: 'now-5m', to: 'now', display: 'Last 5 minutes', section: 3 },
-  { from: 'now-15m', to: 'now', display: 'Last 15 minutes', section: 3 },
-  { from: 'now-30m', to: 'now', display: 'Last 30 minutes', section: 3 },
-  { from: 'now-1h', to: 'now', display: 'Last 1 hour', section: 3 },
-  { from: 'now-3h', to: 'now', display: 'Last 3 hours', section: 3 },
-  { from: 'now-6h', to: 'now', display: 'Last 6 hours', section: 3 },
-  { from: 'now-12h', to: 'now', display: 'Last 12 hours', section: 3 },
-  { from: 'now-24h', to: 'now', display: 'Last 24 hours', section: 3 },
+  { from: 'now-5m', to: 'now', display: '지난 5분', section: 3 },
+  { from: 'now-15m', to: 'now', display: '지난 15분', section: 3 },
+  { from: 'now-30m', to: 'now', display: '지난 30분', section: 3 },
+  { from: 'now-1h', to: 'now', display: '지난 1시간', section: 3 },
+  { from: 'now-3h', to: 'now', display: '지난 3시간', section: 3 },
+  { from: 'now-6h', to: 'now', display: '지난 6시간', section: 3 },
+  { from: 'now-12h', to: 'now', display: '지난 12시간', section: 3 },
+  { from: 'now-24h', to: 'now', display: '지난 24시간', section: 3 },
 
-  { from: 'now-2d', to: 'now', display: 'Last 2 days', section: 0 },
-  { from: 'now-7d', to: 'now', display: 'Last 7 days', section: 0 },
-  { from: 'now-30d', to: 'now', display: 'Last 30 days', section: 0 },
-  { from: 'now-90d', to: 'now', display: 'Last 90 days', section: 0 },
-  { from: 'now-6M', to: 'now', display: 'Last 6 months', section: 0 },
-  { from: 'now-1y', to: 'now', display: 'Last 1 year', section: 0 },
-  { from: 'now-2y', to: 'now', display: 'Last 2 years', section: 0 },
-  { from: 'now-5y', to: 'now', display: 'Last 5 years', section: 0 },
+  { from: 'now-2d', to: 'now', display: '이틀 전', section: 0 },
+  { from: 'now-7d', to: 'now', display: '7일 전', section: 0 },
+  { from: 'now-30d', to: 'now', display: '30일 전', section: 0 },
+  { from: 'now-90d', to: 'now', display: '90일 전', section: 0 },
+  { from: 'now-6M', to: 'now', display: '6개월 전', section: 0 },
+  { from: 'now-1y', to: 'now', display: '1년 전', section: 0 },
+  { from: 'now-2y', to: 'now', display: '2년 전', section: 0 },
+  { from: 'now-5y', to: 'now', display: '5년 전', section: 0 },
 ];
 
 var absoluteFormat = 'MMM D, YYYY HH:mm:ss';
@@ -114,7 +114,7 @@ export function describeTextRange(expr: any) {
     let amount = parseInt(parts[2]);
     let span = spans[unit];
     if (span) {
-      opt.display = isLast ? 'Last ' : 'Next ';
+      opt.display = isLast ? '지난 ' : '다음 ';
       opt.display += amount + ' ' + span.display;
       opt.section = span.section;
       if (amount > 1) {

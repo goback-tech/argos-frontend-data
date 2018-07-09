@@ -58,12 +58,12 @@ export class NewDashboardCtrl {
           folderId: Number($routeParams.folderId),
         },
         dashboard: {
-          title: 'New dashboard',
+          title: '새 대쉬보드',
           panels: [
             {
               type: 'add-panel',
               gridPos: { x: 0, y: 0, w: 12, h: 9 },
-              title: 'Panel Title',
+              title: '패널 제목',
             },
           ],
         },

@@ -59,7 +59,7 @@ export class AddPanelPanel extends React.Component<AddPanelPanelProps, AddPanelP
       .value();
 
     // add special row type
-    panels.push({ id: 'row', name: 'Row', sort: 8, info: { logos: { small: 'public/img/icn-row.svg' } } });
+    panels.push({ id: 'row', name: '열', sort: 8, info: { logos: { small: 'public/img/icn-row.svg' } } });
 
     panels = this.filterPanels(panels, filter);
 
@@ -99,12 +99,12 @@ export class AddPanelPanel extends React.Component<AddPanelPanelProps, AddPanelP
 
     var newPanel: any = {
       type: panelPluginInfo.id,
-      title: 'Panel Title',
+      title: '패널 제목',
       gridPos: { x: gridPos.x, y: gridPos.y, w: gridPos.w, h: gridPos.h },
     };
 
     if (panelPluginInfo.id === 'row') {
-      newPanel.title = 'Row title';
+      newPanel.title = '열 제목';
       newPanel.gridPos = { x: 0, y: 0 };
     }
 
@@ -143,7 +143,7 @@ export class AddPanelPanel extends React.Component<AddPanelPanelProps, AddPanelP
   }
 
   noCopiedPanelPlugins() {
-    return <div className="add-panel__no-panels">No copied panels yet.</div>;
+    return <div className="add-panel__no-panels">복사된 패널이 없습니다.</div>;
   }
 
   filterChange(evt) {
@@ -216,16 +216,16 @@ export class AddPanelPanel extends React.Component<AddPanelPanelProps, AddPanelP
         <div className="add-panel">
           <div className="add-panel__header">
             <i className="gicon gicon-add-panel" />
-            <span className="add-panel__title">New Panel</span>
+            <span className="add-panel__title">새 패널</span>
             <ul className="gf-tabs">
               <li className="gf-tabs-item">
                 <div className={'gf-tabs-link pointer ' + addClass} onClick={this.openAdd.bind(this)}>
-                  Add
+                  추가
                 </div>
               </li>
               <li className="gf-tabs-item">
                 <div className={'gf-tabs-link pointer ' + copyClass} onClick={this.openCopy.bind(this)}>
-                  Paste
+                  붙여넣기
                 </div>
               </li>
             </ul>
@@ -240,7 +240,7 @@ export class AddPanelPanel extends React.Component<AddPanelPanelProps, AddPanelP
                   type="text"
                   autoFocus
                   className="gf-form-input gf-form--grow"
-                  placeholder="Panel Search Filter"
+                  placeholder="패널 검색 필터"
                   value={this.state.filter}
                   onChange={this.filterChange.bind(this)}
                   onKeyPress={this.filterKeyPress.bind(this)}

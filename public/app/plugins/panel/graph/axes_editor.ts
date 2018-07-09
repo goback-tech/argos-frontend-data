@@ -33,12 +33,12 @@ export class AxesEditorCtrl {
     };
 
     this.xAxisStatOptions = [
-      { text: 'Avg', value: 'avg' },
-      { text: 'Min', value: 'min' },
-      { text: 'Max', value: 'max' },
-      { text: 'Total', value: 'total' },
-      { text: 'Count', value: 'count' },
-      { text: 'Current', value: 'current' },
+      { text: '평균', value: 'avg' },
+      { text: '최소', value: 'min' },
+      { text: '최대', value: 'max' },
+      { text: '모두', value: 'total' },
+      { text: '갯수', value: 'count' },
+      { text: '현재', value: 'current' },
     ];
 
     if (this.panel.xaxis.mode === 'custom') {

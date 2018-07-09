@@ -10,7 +10,7 @@ const POINT_VALUE_INDEX = 0;
 const END_COLUMN = ';';
 const END_ROW = '\r\n';
 const QUOTE = '"';
-const EXPORT_FILENAME = 'grafana_data_export.csv';
+const EXPORT_FILENAME = 'argos_data_export.csv';
 
 function csvEscaped(text) {
   if (!text) {

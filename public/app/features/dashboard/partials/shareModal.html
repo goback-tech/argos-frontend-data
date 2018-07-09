@@ -77,7 +77,7 @@
 		</div>
 		<div class="share-modal-content">
 			<p class="share-modal-info-text">
-				Create a direct link to this dashboard or panel, customized with the options below.
+				대쉬보드 혹은 패널 바로가기 링크 생성, 아래의 내용을 수정.
 			</p>
 			<div ng-include src="'shareLinkOptions.html'"></div>
 			<div>
@@ -87,13 +87,13 @@
 							<input type="text" data-share-panel-url class="gf-form-input" ng-model="shareUrl"></input>
 						</div>
 						<div class="gf-form">
-							<button class="btn btn-inverse" clipboard-button="getShareUrl()"><i class="fa fa-clipboard"></i> Copy</button>
+							<button class="btn btn-inverse" clipboard-button="getShareUrl()"><i class="fa fa-clipboard"></i> 복사</button>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="gf-form" ng-show="modeSharePanel">
-				<a href="{{imageUrl}}" target="_blank"><i class="fa fa-camera"></i> Direct link rendered image</a>
+				<a href="{{imageUrl}}" target="_blank"><i class="fa fa-camera"></i> 렌더링된 이미지 바로가기 링크</a>
 			</div>
 		</div>
 </script>

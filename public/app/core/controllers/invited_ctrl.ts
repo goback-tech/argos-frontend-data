@@ -10,9 +10,9 @@ export class InvitedCtrl {
     $scope.navModel = {
       main: {
         icon: 'gicon gicon-branding',
-        text: 'Invite',
-        subTitle: 'Register your Grafana account',
-        breadcrumbs: [{ title: 'Login', url: 'login' }],
+        text: '초대',
+        subTitle: 'ARGOS 계정 등록',
+        breadcrumbs: [{ title: '로그인', url: 'login' }],
       },
     };
 

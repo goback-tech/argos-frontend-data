@@ -29,7 +29,7 @@ export class ManageDashboardsCtrl {
   hasFilters = false;
   tagFilterOptions: any[];
   selectedTagFilter: any;
-  starredFilterOptions = [{ text: 'Filter by Starred', disabled: true }, { text: 'Yes' }, { text: 'No' }];
+  starredFilterOptions = [{ text: '중요표시로 필터', disabled: true }, { text: '네' }, { text: '아니오' }];
   selectedStarredFilter: any;
 
   // used when managing dashboards for a specific folder
@@ -220,7 +220,7 @@ export class ManageDashboardsCtrl {
 
   initTagFilter() {
     return this.searchSrv.getDashboardTags().then(results => {
-      this.tagFilterOptions = [{ term: 'Filter By Tag', disabled: true }].concat(results);
+      this.tagFilterOptions = [{ term: '태그로 필터', disabled: true }].concat(results);
       this.selectedTagFilter = this.tagFilterOptions[0];
     });
   }

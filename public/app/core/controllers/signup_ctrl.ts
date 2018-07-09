@@ -29,7 +29,7 @@ export class SignUpCtrl {
       main: {
         icon: 'gicon gicon-branding',
         text: 'Sign Up',
-        subTitle: 'Register your Grafana account',
+        subTitle: 'Register your ARGOS account',
         breadcrumbs: [{ title: 'Login', url: 'login' }],
       },
     };

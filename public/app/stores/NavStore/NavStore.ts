@@ -44,30 +44,30 @@ export const NavStore = types
       let main = {
         icon: 'fa fa-folder-open',
         id: 'manage-folder',
-        subTitle: 'Manage folder dashboards & permissions',
+        subTitle: '폴더 대쉬보드와 권한 관리',
         url: '',
         text: folder.title,
-        breadcrumbs: [{ title: 'Dashboards', url: 'dashboards' }],
+        breadcrumbs: [{ title: '대쉬보드', url: 'dashboards' }],
         children: [
           {
             active: activeChildId === 'manage-folder-dashboards',
             icon: 'fa fa-fw fa-th-large',
             id: 'manage-folder-dashboards',
-            text: 'Dashboards',
+            text: '대쉬보드',
             url: folder.url,
           },
           {
             active: activeChildId === 'manage-folder-permissions',
             icon: 'fa fa-fw fa-lock',
             id: 'manage-folder-permissions',
-            text: 'Permissions',
+            text: '권한',
             url: `${folder.url}/permissions`,
           },
           {
             active: activeChildId === 'manage-folder-settings',
             icon: 'fa fa-fw fa-cog',
             id: 'manage-folder-settings',
-            text: 'Settings',
+            text: '설정',
             url: `${folder.url}/settings`,
           },
         ],
@@ -77,7 +77,7 @@ export const NavStore = types
     },
 
     initDatasourceEditNav(ds: any, plugin: any, currentPage: string) {
-      let title = 'New';
+      let title = '신규';
       let subTitle = `Type: ${plugin.name}`;
 
       if (ds.id) {
@@ -90,13 +90,13 @@ export const NavStore = types
         subTitle: subTitle,
         url: '',
         text: title,
-        breadcrumbs: [{ title: 'Data Sources', url: 'datasources' }],
+        breadcrumbs: [{ title: '데이터소스', url: 'datasources' }],
         children: [
           {
             active: currentPage === 'datasource-settings',
             icon: 'fa fa-fw fa-sliders',
             id: 'datasource-settings',
-            text: 'Settings',
+            text: '설정',
             url: `datasources/edit/${ds.id}`,
           },
         ],
@@ -108,7 +108,7 @@ export const NavStore = types
           active: currentPage === 'datasource-dashboards',
           icon: 'fa fa-fw fa-th-large',
           id: 'datasource-dashboards',
-          text: 'Dashboards',
+          text: '대쉬보드',
           url: `datasources/edit/${ds.id}/dashboards`,
         });
       }

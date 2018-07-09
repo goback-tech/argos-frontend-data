@@ -15,8 +15,8 @@
 
 	<div class="gf-form-inline" ng-if="ctrl.panel.mode === 'search'">
 		<div class="gf-form">
-			<span class="gf-form-label width-10">Search options</span>
-			<span class="gf-form-label">Query</span>
+			<span class="gf-form-label width-10">검색 옵션</span>
+			<span class="gf-form-label">쿼리</span>
 
 			<input type="text" class="gf-form-input" placeholder="title query"
 				ng-model="ctrl.panel.query" ng-change="ctrl.refresh()" ng-model-onblur>
@@ -24,9 +24,9 @@
 		</div>
 
 		<div class="gf-form">
-			<span class="gf-form-label">Tags</span>
+			<span class="gf-form-label">태그</span>
 
-			<bootstrap-tagsinput ng-model="ctrl.panel.tags" tagclass="label label-tag" placeholder="add tags" on-tags-updated="ctrl.refresh()">
+			<bootstrap-tagsinput ng-model="ctrl.panel.tags" tagclass="label label-tag" placeholder="태그 추가" on-tags-updated="ctrl.refresh()">
 			</bootstrap-tagsinput>
 		</div>
 	</div>

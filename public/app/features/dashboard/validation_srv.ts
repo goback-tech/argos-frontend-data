@@ -12,11 +12,11 @@ export class ValidationSrv {
   constructor(private $q, private backendSrv) {}
 
   validateNewDashboardName(folderId, name) {
-    return this.validate(folderId, name, 'A dashboard in this folder with the same name already exists');
+    return this.validate(folderId, name, '이 폴더안에 동일한 이름의 대쉬보드가 있습니다');
   }
 
   validateNewFolderName(name) {
-    return this.validate(0, name, 'A folder or dashboard in the general folder with the same name already exists');
+    return this.validate(0, name, '동일한 이름의 대쉬보드가 이미 있습니다.');
   }
 
   private validate(folderId, name, existingErrorMessage) {
@@ -26,14 +26,14 @@ export class ValidationSrv {
     if (name.length === 0) {
       return this.$q.reject({
         type: 'REQUIRED',
-        message: 'Name is required',
+        message: '이름 필수',
       });
     }
 
     if (folderId === 0 && nameLowerCased === this.rootName) {
       return this.$q.reject({
         type: 'EXISTING',
-        message: 'This is a reserved name and cannot be used for a folder.',
+        message: '예약어이거나 폴더 이름으로 사용할 수 없습니다.',
       });
     }
 

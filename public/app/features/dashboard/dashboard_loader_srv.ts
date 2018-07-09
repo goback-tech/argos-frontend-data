@@ -49,8 +49,8 @@ export class DashboardLoaderSrv {
         .getDashboardByUid(uid)
         .then(result => {
           if (result.meta.isFolder) {
-            this.$rootScope.appEvent('alert-error', ['Dashboard not found']);
-            throw new Error('Dashboard not found');
+            this.$rootScope.appEvent('alert-error', ['대쉬보드를 찾을 수 없습니다.']);
+            throw new Error('대쉬보드를 찾을 수 없습니다.');
           }
           return result;
         })

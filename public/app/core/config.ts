@@ -33,9 +33,9 @@ export class Settings {
   constructor(options) {
     var defaults = {
       datasources: {},
-      window_title_prefix: 'Grafana - ',
+      window_title_prefix: 'ARGOS - ',
       panels: {},
-      new_panel_title: 'Panel Title',
+      new_panel_title: '패널 제목',
       playlist_timespan: '1m',
       unsaved_changes_warning: true,
       appSubUrl: '',

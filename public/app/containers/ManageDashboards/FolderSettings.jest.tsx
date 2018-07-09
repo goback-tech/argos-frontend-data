@@ -13,7 +13,7 @@ describe('FolderSettings', () => {
       Promise.resolve({
         id: 1,
         uid: 'uid',
-        title: 'Folder Name',
+        title: '폴더 이름',
         url: '/dashboards/f/uid/folder-name',
         canSave: true,
         version: 1,

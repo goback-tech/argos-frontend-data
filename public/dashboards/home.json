@@ -11,7 +11,7 @@
   "links": [],
   "panels": [
     {
-      "content": "<div class=\"text-center dashboard-header\">\n  <span>Home Dashboard</span>\n</div>",
+      "content": "<div class=\"text-center dashboard-header\">\n  <span>홈 대쉬보드</span>\n</div>",
       "editable": true,
       "id": 1,
       "links": [],
@@ -103,6 +103,6 @@
     "type": "timepicker"
   },
   "timezone": "browser",
-  "title": "Home",
+  "title": "아르고스 운영지표 홈",
   "version": 0
 }

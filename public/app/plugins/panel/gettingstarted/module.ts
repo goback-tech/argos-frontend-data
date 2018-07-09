@@ -16,17 +16,17 @@ class GettingStartedPanelCtrl extends PanelCtrl {
     this.steps = [];
 
     this.steps.push({
-      title: 'Install Grafana',
+      title: '아르고스 데이터 시각화 엔진 설치',
       icon: 'icon-gf icon-gf-check',
-      href: 'http://docs.grafana.org/',
+      href: '#',
       target: '_blank',
-      note: 'Review the installation docs',
+      note: '설치 문서 확인',
       check: () => $q.when(true),
     });
 
     this.steps.push({
-      title: 'Create your first data source',
-      cta: 'Add data source',
+      title: '첫 데이터 소스를 생성하세요',
+      cta: '데이터 소스 추가',
       icon: 'icon-gf icon-gf-datasources',
       href: 'datasources/new?gettingstarted',
       check: () => {
@@ -39,8 +39,8 @@ class GettingStartedPanelCtrl extends PanelCtrl {
     });
 
     this.steps.push({
-      title: 'Create your first dashboard',
-      cta: 'New dashboard',
+      title: '첫 대쉬보드를 생성하세요',
+      cta: '새 대쉬보드',
       icon: 'icon-gf icon-gf-dashboard',
       href: 'dashboard/new?gettingstarted',
       check: () => {
@@ -51,8 +51,8 @@ class GettingStartedPanelCtrl extends PanelCtrl {
     });
 
     this.steps.push({
-      title: 'Invite your team',
-      cta: 'Add Users',
+      title: '팀 초대',
+      cta: '사용자 추가',
       icon: 'icon-gf icon-gf-users',
       href: 'org/users?gettingstarted',
       check: () => {
@@ -63,8 +63,8 @@ class GettingStartedPanelCtrl extends PanelCtrl {
     });
 
     this.steps.push({
-      title: 'Install apps & plugins',
-      cta: 'Explore plugin repository',
+      title: '플러그인 및 어플리케이션 추가',
+      cta: '플러그인 리포지토리 검색',
       icon: 'icon-gf icon-gf-apps',
       href: 'https://grafana.com/plugins?utm_source=grafana_getting_started',
       check: () => {

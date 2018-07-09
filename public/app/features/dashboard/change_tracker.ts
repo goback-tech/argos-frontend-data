@@ -39,7 +39,7 @@ export class ChangeTracker {
         return undefined;
       }
       if (this.hasChanges()) {
-        return 'There are unsaved changes to this dashboard';
+        return '이 대쉬보드에 변경되지 않은 사항이 있습니다.';
       }
       return undefined;
     };

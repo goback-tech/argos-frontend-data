@@ -1,12 +1,12 @@
 <page-header model="ctrl.navModel"></page-header>
 
 <div class="page-container page-body">
-	<h2 class="page-sub-heading">Folder Settings</h2>
+	<h2 class="page-sub-heading">폴더 설정</h2>
 
 	<div class="section gf-form-group">
 		<form name="folderSettingsForm" ng-submit="ctrl.save()">
 			<div class="gf-form">
-				<label class="gf-form-label width-7">Name</label>
+				<label class="gf-form-label width-7">이름</label>
 				<input type="text" class="gf-form-input width-30" ng-model='ctrl.title' ng-change="ctrl.titleChanged()"></input>
 			</div>
 			<div class="gf-form-button-row">

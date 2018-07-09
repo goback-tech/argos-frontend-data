@@ -1,18 +1,18 @@
 <h3 class="dashboard-settings__header">
-  <a ng-click="ctrl.backToList()">Dashboard Links</a>
-  <span ng-show="ctrl.mode === 'new'">&gt; New</span>
-  <span ng-show="ctrl.mode === 'edit'">&gt; Edit</span>
+  <a ng-click="ctrl.backToList()">대쉬보드 링크</a>
+  <span ng-show="ctrl.mode === 'new'">&gt; 신규</span>
+  <span ng-show="ctrl.mode === 'edit'">&gt; 수정</span>
 </h3>
 
 <div ng-if="ctrl.mode == 'list'">
   <div ng-if="ctrl.dashboard.links.length === 0">
     <div class="empty-list-cta">
       <div class="empty-list-cta__title">
-        There are no dashboard links added yet
+        추가된 대쉬보드링크가 없습니다.
       </div>
       <a ng-click="ctrl.setupNew()" class="empty-list-cta__button btn btn-xlarge btn-success">
         <i class="gicon gicon-add-link"></i>
-        Add Dashboard Link
+        대쉬보드 링크 추가
       </a>
       <div class="grafana-info-box">
         <h5>What are Dashboard Links?</h5>
@@ -27,7 +27,7 @@
     <div class="page-action-bar">
       <div class="page-action-bar__spacer"></div>
       <a type="button" class="btn btn-success" ng-click="ctrl.setupNew()">
-        <i class="fa fa-plus"></i> New</a>
+        <i class="fa fa-plus"></i> 신규</a>
     </div>
     <table class="filter-table filter-table--hover">
       <thead>
@@ -75,41 +75,41 @@
   <div class="gf-form-group">
     <div class="gf-form-group">
       <div class="gf-form">
-        <span class="gf-form-label width-8">Type</span>
+        <span class="gf-form-label width-8">타입</span>
         <div class="gf-form-select-wrapper width-10">
           <select class="gf-form-input" ng-model="ctrl.link.type" ng-options="f for f in ['dashboards','link']"></select>
         </div>
       </div>
 
       <div class="gf-form" ng-show="ctrl.link.type === 'dashboards'">
-        <span class="gf-form-label width-8">With tags</span>
-        <bootstrap-tagsinput ng-model="ctrl.link.tags" tagclass="label label-tag" placeholder="add tags" style="margin-right: .25rem"></bootstrap-tagsinput>
+        <span class="gf-form-label width-8">태그와 함께s</span>
+        <bootstrap-tagsinput ng-model="ctrl.link.tags" tagclass="label label-tag" placeholder="태그 추가" style="margin-right: .25rem"></bootstrap-tagsinput>
       </div>
 
       <gf-form-switch ng-show="ctrl.link.type === 'dashboards'" class="gf-form" label="As dropdown" checked="ctrl.link.asDropdown"
         switch-class="max-width-4" label-class="width-8"></gf-form-switch>
       <div class="gf-form" ng-show="ctrl.link.type === 'dashboards' && ctrl.link.asDropdown">
-        <span class="gf-form-label width-8">Title</span>
+        <span class="gf-form-label width-8">제목</span>
         <input type="text" ng-model="ctrl.link.title" class="gf-form-input max-width-10" ng-model-onblur>
       </div>
       <div ng-show="ctrl.link.type === 'link'">
         <div class="gf-form">
-          <li class="gf-form-label width-8">Url</li>
+          <li class="gf-form-label width-8">주소</li>
           <input type="text" ng-model="ctrl.link.url" class="gf-form-input width-20" ng-model-onblur>
         </div>
 
         <div class="gf-form">
-          <span class="gf-form-label width-8">Title</span>
+          <span class="gf-form-label width-8">제목</span>
           <input type="text" ng-model="ctrl.link.title" class="gf-form-input width-20" ng-model-onblur>
         </div>
 
         <div class="gf-form">
-          <span class="gf-form-label width-8">Tooltip</span>
-          <input type="text" ng-model="ctrl.link.tooltip" class="gf-form-input width-20" placeholder="Open dashboard" ng-model-onblur>
+          <span class="gf-form-label width-8">툴팁</span>
+          <input type="text" ng-model="ctrl.link.tooltip" class="gf-form-input width-20" placeholder="대쉬보드 열기" ng-model-onblur>
         </div>
 
         <div class="gf-form">
-          <span class="gf-form-label width-8">Icon</span>
+          <span class="gf-form-label width-8">아이콘</span>
           <div class="gf-form-select-wrapper width-20">
             <select class="gf-form-input" ng-model="ctrl.link.icon" ng-options="k as k for (k, v) in ctrl.iconMap"></select>
           </div>
@@ -120,9 +120,9 @@
     <div class="gf-form-group">
       <h5 class="section-heading">Include</h5>
       <div>
-        <gf-form-switch class="gf-form" label="Time range" checked="ctrl.link.keepTime" switch-class="max-width-6" label-class="width-9"></gf-form-switch>
-        <gf-form-switch class="gf-form" label="Variable values" checked="ctrl.link.includeVars" switch-class="max-width-6" label-class="width-9"></gf-form-switch>
-        <gf-form-switch class="gf-form" label="Open in new tab" checked="ctrl.link.targetBlank" switch-class="max-width-6" label-class="width-9"></gf-form-switch>
+        <gf-form-switch class="gf-form" label="시간범위" checked="ctrl.link.keepTime" switch-class="max-width-6" label-class="width-9"></gf-form-switch>
+        <gf-form-switch class="gf-form" label="변수" checked="ctrl.link.includeVars" switch-class="max-width-6" label-class="width-9"></gf-form-switch>
+        <gf-form-switch class="gf-form" label="새탭에서 열기" checked="ctrl.link.targetBlank" switch-class="max-width-6" label-class="width-9"></gf-form-switch>
       </div>
     </div>
   </div>

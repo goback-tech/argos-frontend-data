@@ -28,7 +28,7 @@ export class DashboardSrv {
       err.isHandled = true;
 
       this.$rootScope.appEvent('confirm-modal', {
-        title: 'Conflict',
+        title: '충돌',
         text: 'Someone else has updated this dashboard.',
         text2: 'Would you still like to save this dashboard?',
         yesText: 'Save & Overwrite',
@@ -43,7 +43,7 @@ export class DashboardSrv {
       err.isHandled = true;
 
       this.$rootScope.appEvent('confirm-modal', {
-        title: 'Conflict',
+        title: '충돌',
         text: 'A dashboard with the same name in selected folder already exists.',
         text2: 'Would you still like to save this dashboard?',
         yesText: 'Save & Overwrite',
@@ -58,7 +58,7 @@ export class DashboardSrv {
       err.isHandled = true;
 
       this.$rootScope.appEvent('confirm-modal', {
-        title: 'Plugin Dashboard',
+        title: '대쉬보드 플러그인',
         text: err.data.message,
         text2: 'Your changes will be lost when you update the plugin. Use Save As to create custom version.',
         yesText: 'Overwrite',
@@ -85,7 +85,7 @@ export class DashboardSrv {
     }
 
     this.$rootScope.appEvent('dashboard-saved', this.dash);
-    this.$rootScope.appEvent('alert-success', ['Dashboard saved']);
+    this.$rootScope.appEvent('alert-success', ['대쉬보드 저장됨']);
 
     return this.dash;
   }
@@ -113,7 +113,7 @@ export class DashboardSrv {
       return Promise.resolve();
     }
 
-    if (this.dash.title === 'New dashboard') {
+    if (this.dash.title === '새 대쉬보드') {
       return this.showSaveAsModal();
     }
 

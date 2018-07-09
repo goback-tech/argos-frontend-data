@@ -13,16 +13,16 @@ export class ShareSnapshotCtrl {
     $scope.step = 1;
 
     $scope.expireOptions = [
-      { text: '1 Hour', value: 60 * 60 },
-      { text: '1 Day', value: 60 * 60 * 24 },
-      { text: '7 Days', value: 60 * 60 * 24 * 7 },
-      { text: 'Never', value: 0 },
+      { text: '1 시간', value: 60 * 60 },
+      { text: '1 일', value: 60 * 60 * 24 },
+      { text: '7 일', value: 60 * 60 * 24 * 7 },
+      { text: '안함', value: 0 },
     ];
 
     $scope.accessOptions = [
-      { text: 'Anyone with the link', value: 1 },
-      { text: 'Organization users', value: 2 },
-      { text: 'Public on the web', value: 3 },
+      { text: '링크를 소유한 모두', value: 1 },
+      { text: '조직 사용자', value: 2 },
+      { text: '웹 공개', value: 3 },
     ];
 
     $scope.init = function() {

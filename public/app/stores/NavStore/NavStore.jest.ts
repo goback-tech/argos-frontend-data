@@ -2,7 +2,7 @@ import { NavStore } from './NavStore';
 
 describe('NavStore', () => {
   const folderId = 1;
-  const folderTitle = 'Folder Name';
+  const folderTitle = '폴더 명';
   const folderUrl = '/dashboards/f/uid/folder-name';
   const canAdmin = true;
 

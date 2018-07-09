@@ -24,7 +24,7 @@ function dashRepeatOptionDirective(variableSrv) {
 
       if (scope.variables.length === 0) {
         scope.variables.unshift({
-          text: 'No template variables found',
+          text: '템플릿변수를 찾을 수 없습니다.',
           value: null,
         });
       }

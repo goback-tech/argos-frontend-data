@@ -9,17 +9,17 @@
     <gf-form-switch class="gf-form" label="Show headings" label-class="width-9" checked="ctrl.panel.headings" on-change="ctrl.refresh()"></gf-form-switch>
 
     <div class="gf-form">
-      <span class="gf-form-label width-9">Max items</span>
+      <span class="gf-form-label width-9">최대 아이템</span>
       <input class="gf-form-input max-width-5" type="number" ng-model="ctrl.panel.limit" ng-model-onblur ng-change="ctrl.refresh()">
     </div>
   </div>
 
   <div class="section gf-form-group">
-    <h5 class="section-heading">Search</h5>
+    <h5 class="section-heading">검색</h5>
 
     <div class="gf-form">
-      <span class="gf-form-label width-6">Query</span>
-      <input type="text" class="gf-form-input" placeholder="title query" ng-model="ctrl.panel.query" ng-change="ctrl.refresh()" ng-model-onblur>
+      <span class="gf-form-label width-6">쿼리</span>
+      <input type="text" class="gf-form-input" placeholder="쿼리제목" ng-model="ctrl.panel.query" ng-change="ctrl.refresh()" ng-model-onblur>
     </div>
 
     <div class="gf-form">
@@ -33,7 +33,7 @@
 
     <div class="gf-form">
       <span class="gf-form-label width-6">Tags</span>
-      <bootstrap-tagsinput ng-model="ctrl.panel.tags" tagclass="label label-tag" placeholder="add tags" on-tags-updated="ctrl.refresh()">
+      <bootstrap-tagsinput ng-model="ctrl.panel.tags" tagclass="label label-tag" placeholder="태그추가" on-tags-updated="ctrl.refresh()">
       </bootstrap-tagsinput>
     </div>
   </div>
