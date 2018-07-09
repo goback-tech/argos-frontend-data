@@ -10,12 +10,12 @@
     <div class="page-action-bar__spacer"></div>
 
     <button class="btn btn-inverse" ng-show="ctrl.pendingInvites.length" ng-click="ctrl.showInvites = true">
-      Pending Invites ({{ctrl.pendingInvites.length}})
+      초대 대기 ({{ctrl.pendingInvites.length}})
     </button>
 
     <a class="btn btn-success" href="org/users/invite" ng-show="ctrl.canInvite">
       <i class="fa fa-plus"></i>
-      <span>Invite</span>
+      <span>초대</span>
     </a>
 
     <a class="btn btn-success" ng-href="{{ctrl.externalUserMngLinkUrl}}" target="_blank" ng-if="ctrl.externalUserMngLinkUrl">

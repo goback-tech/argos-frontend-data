@@ -232,7 +232,7 @@
               }
             ],
             "thresholds": "",
-            "title": "Dashboard count",
+            "title": "대쉬보드 갯수",
             "type": "singlestat",
             "valueFontSize": "120%",
             "valueMaps": [
@@ -465,7 +465,7 @@
         "repeatIteration": null,
         "repeatRowId": null,
         "showTitle": false,
-        "title": "Dashboard Row",
+        "title": "대쉬보드 열",
         "titleSize": "h6"
       },
       {
@@ -711,7 +711,7 @@
         "repeatIteration": null,
         "repeatRowId": null,
         "showTitle": false,
-        "title": "Dashboard Row",
+        "title": "대쉬보드 열",
         "titleSize": "h6"
       },
       {
@@ -888,7 +888,7 @@
         "repeatIteration": null,
         "repeatRowId": null,
         "showTitle": false,
-        "title": "Dashboard Row",
+        "title": "대쉬보드 열",
         "titleSize": "h6"
       },
       {
@@ -1009,7 +1009,7 @@
         "repeatIteration": null,
         "repeatRowId": null,
         "showTitle": false,
-        "title": "Dashboard Row",
+        "title": "대쉬보드 열",
         "titleSize": "h6"
       }
     ],

@@ -327,13 +327,13 @@ func createPackage(options linuxPackageOptions) {
 		"-p", "./dist",
 	}
 
-	name := "grafana"
+	name := "ARGOS"
 	if enterprise {
 		name += "-enterprise"
 	}
 	args = append(args, "--name", name)
 
-	description := "Grafana"
+	description := "GOBACK"
 	if enterprise {
 		description += " Enterprise"
 	}

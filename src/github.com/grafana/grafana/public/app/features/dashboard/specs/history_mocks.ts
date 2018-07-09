@@ -111,7 +111,7 @@ export function restore(version, restoredFrom?) {
                 thresholds: [],
                 timeFrom: null,
                 timeShift: null,
-                title: 'Panel Title',
+                title: '패널제목',
                 tooltip: {
                   shared: true,
                   sort: 0,
@@ -148,7 +148,7 @@ export function restore(version, restoredFrom?) {
             repeatIteration: null,
             repeatRowId: null,
             showTitle: false,
-            title: 'Dashboard Row',
+            title: '대쉬보드 열',
             titleSize: 'h6',
           },
         ],
