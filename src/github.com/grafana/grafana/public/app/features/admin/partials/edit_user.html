@@ -1,0 +1,101 @@
+<page-header model="navModel"></page-header>
+
+<div class="page-container page-body">
+
+	<div class="page-sub-heading">
+		<h2>사용자 수정</h2>
+	</div>
+
+	<form name="userForm" class="gf-form-group">
+			<div class="gf-form">
+				<span class="gf-form-label width-10">이름</span>
+				<input type="text" required ng-model="user.name" class="gf-form-input max-width-25" >
+			</div>
+			<div class="gf-form">
+				<span class="gf-form-label width-10">이메일</span>
+				<input type="email" ng-model="user.email" class="gf-form-input max-width-25" >
+			</div>
+			<div class="gf-form">
+				<span class="gf-form-label width-10">사용자명</span>
+				<input type="text" ng-model="user.login" class="gf-form-input max-width-25" >
+			</div>
+
+			<div class="gf-form-button-row">
+				<button type="submit" class="btn btn-success" ng-click="update()" ng-show="!createMode">업데이트</button>
+			</div>
+	</form>
+
+	<h3 class="page-heading">비밀번호 변경</h3>
+
+	<form name="passwordForm" class="gf-form-group">
+		<div class="gf-form">
+				<span class="gf-form-label width-10">새 비밀번호</span>
+				<input type="password" required ng-minlength="4" ng-model="password" class="gf-form-input max-width-25">
+		</div>
+
+		<div class="gf-form-button-row">
+			<button type="submit" class="btn btn-success" ng-click="setPassword()">업데이트</button>
+		</div>
+	</form>
+
+	<h3 class="page-heading">권한</h3>
+
+	<form name="passwordForm" class="gf-form-group">
+		<div class="gf-form" >
+			<gf-form-switch class="gf-form" label="ARGOS-데이터시각화 관리자" checked="permissions.isGrafanaAdmin" switch-class="max-width-6"></gf-form-switch>
+		</div>
+
+		<div class="gf-form-button-row">
+			<button type="submit" class="btn btn-success" ng-click="updatePermissions()">업데이트</button>
+		</div>
+	</form>
+
+	<h3 class="page-heading">조직</h3>
+
+	<form name="addOrgForm" class="gf-form-group">
+		<div class="gf-form-inline">
+			<div class="gf-form">
+				<span class="gf-form-label">추가</span>
+				<input type="text" ng-model="newOrg.name" bs-typeahead="searchOrgs"	required class="gf-form-input max-width-20" placeholder="organization name">
+			</div>
+			<div class="gf-form">
+        	<span class="gf-form-label">역할</span>
+        	<span class="gf-form-select-wrapper">
+            	<select type="text" ng-model="newOrg.role" class="gf-form-input width-10" ng-options="f for f in ['Viewer', 'Editor', 'Admin']"></select>
+        	</span>
+			</div>
+			<div class="gf-form">
+				<button class="btn btn-success gf-form-btn" ng-click="addOrgUser()">추가</button>
+			</div>
+		</div>
+	</form>
+
+	<table class="filter-table">
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>역할</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tr ng-repeat="org in orgs">
+			<td>
+				{{org.name}} <span class="label label-info" ng-show="org.orgId === user.orgId">Current</span>
+			</td>
+			<td>
+        <div class="gf-form">
+            <span class="gf-form-select-wrapper">
+                <select type="text" ng-model="org.role" class="gf-form-input max-width-12" ng-options="f for f in ['Viewer', 'Editor', 'Admin']" ng-change="updateOrgUser(org)">
+                </select>
+            </span>
+        </div>
+			</td>
+			<td style="width: 1%">
+				<a ng-click="removeOrgUser(org)" class="btn btn-danger btn-mini">
+					<i class="fa fa-remove"></i>
+				</a>
+			</td>
+		</tr>
+	</table>
+
+</div>
