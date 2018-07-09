@@ -21,7 +21,7 @@ export class ShareSnapshotCtrl {
 
     $scope.accessOptions = [
       { text: '링크를 소유한 모두', value: 1 },
-      { text: '조직 사용자', value: 2 },
+      { text: '기관 사용자', value: 2 },
       { text: '웹 공개', value: 3 },
     ];
 

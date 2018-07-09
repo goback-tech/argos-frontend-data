@@ -109,7 +109,7 @@ class Graph extends Component<any, any> {
         mode: 'time',
         min: min,
         max: max,
-        label: 'Datetime',
+        label: '날짜시간',
         ticks: ticks,
         timeformat: time_format(ticks, min, max),
       },

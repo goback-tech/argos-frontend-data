@@ -19,7 +19,7 @@
     {
       "type": "panel",
       "id": "graph",
-      "name": "Graph",
+      "name": "그래프",
       "version": "5.0.0"
     },
     {
@@ -31,7 +31,7 @@
     {
       "type": "panel",
       "id": "singlestat",
-      "name": "Singlestat",
+      "name": "싱글스탯",
       "version": "5.0.0"
     }
   ],
@@ -44,7 +44,7 @@
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
+        "name": "공지알람",
         "type": "dashboard"
       }
     ]

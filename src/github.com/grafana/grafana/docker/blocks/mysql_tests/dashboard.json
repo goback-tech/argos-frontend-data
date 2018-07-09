@@ -19,7 +19,7 @@
     {
       "type": "panel",
       "id": "graph",
-      "name": "Graph",
+      "name": "그래프",
       "version": "5.0.0"
     },
     {

@@ -314,10 +314,10 @@ func createPackage(options linuxPackageOptions) {
 
 	args := []string{
 		"-s", "dir",
-		"--description", "Grafana",
+		"--description", "ARGOS",
 		"-C", packageRoot,
-		"--url", "https://grafana.com",
-		"--maintainer", "contact@grafana.com",
+		"--url", "https://goback.world",
+		"--maintainer", "contact@goback.world",
 		"--config-files", options.initdScriptFilePath,
 		"--config-files", options.etcDefaultFilePath,
 		"--config-files", options.systemdServiceFilePath,

@@ -845,9 +845,9 @@ angular.module('ui.bootstrap.datepicker', ['ui.bootstrap.dateparser', 'ui.bootst
     'datetime-local': 'yyyy-MM-ddTHH:mm:ss.sss',
     'month': 'yyyy-MM'
   },
-  currentText: 'Today',
-  clearText: 'Clear',
-  closeText: 'Done',
+  currentText: '오늘',
+  clearText: '초기화',
+  closeText: '닫기',
   closeOnDateSelection: true,
   appendToBody: false,
   showButtonBar: true,

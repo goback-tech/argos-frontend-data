@@ -1,7 +1,7 @@
 
 baseurl = "http://localhost:3002/"
-languageCode = "en-us"
-title = "Grafana Documentation"
+languageCode = "ko-KR"
+title = "Argos 시각화 Documentation"
 canonifyurls = true
 relativeURLs = false
 verbose = true

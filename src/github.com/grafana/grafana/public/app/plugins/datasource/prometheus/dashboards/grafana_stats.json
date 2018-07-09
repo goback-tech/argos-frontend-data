@@ -446,7 +446,7 @@
                 "step": 20
               }
             ],
-            "title": "Grafana version",
+            "title": "ARGOS 데이터 시각화 version",
             "transform": "timeseries_to_rows",
             "type": "table"
           },

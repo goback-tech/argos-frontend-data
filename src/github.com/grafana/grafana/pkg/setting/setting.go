@@ -670,9 +670,9 @@ func (cfg *Cfg) Load(args *CommandLineArgs) error {
 	}
 
 	// check old key  name
-	GrafanaComUrl = iniFile.Section("grafana_net").Key("url").MustString("")
+	GrafanaComUrl = iniFile.Section("argos_net").Key("url").MustString("")
 	if GrafanaComUrl == "" {
-		GrafanaComUrl = iniFile.Section("grafana_com").Key("url").MustString("https://grafana.com")
+		GrafanaComUrl = iniFile.Section("argos_com").Key("url").MustString("https://goback.world")
 	}
 
 	imageUploadingSection := iniFile.Section("external_image_storage")

@@ -6,12 +6,12 @@
 			</li>
 			<li ng-class="{active: ctrl.subTabIndex === 1}">
 				<a ng-click="ctrl.subTabIndex = 1">
-					Series overrides <span class="muted">({{ctrl.panel.seriesOverrides.length}})</span>
+					오버라이드시리즈 <span class="muted">({{ctrl.panel.seriesOverrides.length}})</span>
 				</a>
 			</li>
 			<li ng-class="{active: ctrl.subTabIndex === 2}">
 				<a ng-click="ctrl.subTabIndex = 2">
-					Thresholds <span class="muted">({{ctrl.panel.thresholds.length}})</span>
+					임계값 <span class="muted">({{ctrl.panel.thresholds.length}})</span>
 				</a>
 			</li>
 		</ul>
@@ -20,9 +20,9 @@
 	<div class="edit-tab-content" ng-if="ctrl.subTabIndex === 0">
 		<div class="section gf-form-group">
 			<h5 class="section-heading">그리기 모드</h5>
-			<gf-form-switch class="gf-form" label="Bars" label-class="width-5" checked="ctrl.panel.bars" on-change="ctrl.render()"></gf-form-switch>
-			<gf-form-switch class="gf-form" label="Lines" label-class="width-5" checked="ctrl.panel.lines" on-change="ctrl.render()"></gf-form-switch>
-			<gf-form-switch class="gf-form" label="Points" label-class="width-5" checked="ctrl.panel.points" on-change="ctrl.render()"></gf-form-switch>
+			<gf-form-switch class="gf-form" label="바" label-class="width-5" checked="ctrl.panel.bars" on-change="ctrl.render()"></gf-form-switch>
+			<gf-form-switch class="gf-form" label="라인" label-class="width-5" checked="ctrl.panel.lines" on-change="ctrl.render()"></gf-form-switch>
+			<gf-form-switch class="gf-form" label="포인트" label-class="width-5" checked="ctrl.panel.points" on-change="ctrl.render()"></gf-form-switch>
 		</div>
 		<div class="section gf-form-group">
 			<h5 class="section-heading">모드 설정들</h5>
@@ -38,7 +38,7 @@
 					<select class="gf-form-input" ng-model="ctrl.panel.linewidth" ng-options="f for f in [0,1,2,3,4,5,6,7,8,9,10]" ng-change="ctrl.render()" ng-disabled="!ctrl.panel.lines"></select>
 				</div>
 			</div>
-			<gf-form-switch ng-disabled="!ctrl.panel.lines" class="gf-form" label="Staircase" label-class="width-8" checked="ctrl.panel.steppedLine" on-change="ctrl.render()">
+			<gf-form-switch ng-disabled="!ctrl.panel.lines" class="gf-form" label="계단형" label-class="width-8" checked="ctrl.panel.steppedLine" on-change="ctrl.render()">
 			</gf-form-switch>
 			<div class="gf-form">
 				<label class="gf-form-label width-8">포인트 반경</label>
@@ -70,13 +70,13 @@
 		</div>
 
 		<div class="section gf-form-group">
-			<h5 class="section-heading">Stacking & Null value</h5>
-			<gf-form-switch class="gf-form" label="Stack" label-class="width-7" checked="ctrl.panel.stack" on-change="ctrl.refresh()">
+			<h5 class="section-heading">스태킹 & Null 값</h5>
+			<gf-form-switch class="gf-form" label="스택" label-class="width-7" checked="ctrl.panel.stack" on-change="ctrl.refresh()">
 			</gf-form-switch>
 			<gf-form-switch class="gf-form" ng-show="ctrl.panel.stack" label="Percent" label-class="width-7" checked="ctrl.panel.percentage" on-change="ctrl.render()">
 			</gf-form-switch>
 			<div class="gf-form">
-				<label class="gf-form-label width-7">Null value</label>
+				<label class="gf-form-label width-7">Null 값</label>
 				<div class="gf-form-select-wrapper">
 					<select class="gf-form-input max-width-9" ng-model="ctrl.panel.nullPointMode" ng-options="f for f in ['connected', 'null', 'null as zero']" ng-change="ctrl.render()"></select>
 				</div>

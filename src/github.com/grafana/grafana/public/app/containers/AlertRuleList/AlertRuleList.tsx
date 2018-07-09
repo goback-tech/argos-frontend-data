@@ -63,7 +63,7 @@ export class AlertRuleList extends React.Component<IContainerProps, any> {
                 <input
                   type="text"
                   className="gf-form-input"
-                  placeholder="Search alerts"
+                  placeholder="알람 검색"
                   value={alertList.search}
                   onChange={this.onSearchQueryChange}
                 />
@@ -71,7 +71,7 @@ export class AlertRuleList extends React.Component<IContainerProps, any> {
               </label>
             </div>
             <div className="gf-form">
-              <label className="gf-form-label">States</label>
+              <label className="gf-form-label">상태</label>
 
               <div className="gf-form-select-wrapper width-13">
                 <select className="gf-form-input" onChange={this.onStateFilterChanged} value={alertList.stateFilter}>
@@ -83,7 +83,7 @@ export class AlertRuleList extends React.Component<IContainerProps, any> {
             <div className="page-action-bar__spacer" />
 
             <a className="btn btn-secondary" onClick={this.onOpenHowTo}>
-              <i className="fa fa-info-circle" /> How to add an alert
+              <i className="fa fa-info-circle" /> 알람 추가 방법
             </a>
           </div>
 

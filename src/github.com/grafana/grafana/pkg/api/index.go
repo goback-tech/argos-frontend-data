@@ -239,7 +239,7 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 		cfgNode := &dtos.NavLink{
 			Id:       "cfg",
 			Text:     "설정",
-			SubTitle: "조직: " + c.OrgName,
+			SubTitle: "기관: " + c.OrgName,
 			Icon:     "gicon gicon-cog",
 			Url:      setting.AppSubUrl + "/datasources",
 			Children: []*dtos.NavLink{
@@ -253,14 +253,14 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 				{
 					Text:        "사용자",
 					Id:          "users",
-					Description: "조직 구성원 관리",
+					Description: "기관 구성원 관리",
 					Icon:        "gicon gicon-user",
 					Url:         setting.AppSubUrl + "/org/users",
 				},
 				{
 					Text:        "팀",
 					Id:          "teams",
-					Description: "조직 그룹 관리",
+					Description: "기관 그룹 관리",
 					Icon:        "gicon gicon-team",
 					Url:         setting.AppSubUrl + "/org/teams",
 				},
@@ -274,7 +274,7 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 				{
 					Text:        "설정",
 					Id:          "org-settings",
-					Description: "조직 설정",
+					Description: "기관 설정",
 					Icon:        "gicon gicon-preferences",
 					Url:         setting.AppSubUrl + "/org",
 				},
@@ -293,7 +293,7 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 			cfgNode = &dtos.NavLink{
 				Id:       "cfg",
 				Text:     "설정",
-				SubTitle: "조직: " + c.OrgName,
+				SubTitle: "기관: " + c.OrgName,
 				Icon:     "gicon gicon-cog",
 				Url:      setting.AppSubUrl + "/admin/users",
 				Children: make([]*dtos.NavLink, 0),
@@ -310,13 +310,13 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 			cfgNode.Children = append(cfgNode.Children, &dtos.NavLink{
 				Text:         "서버 관리",
 				HideFromTabs: true,
-				SubTitle:     "모든 조직과 사용자 관리",
+				SubTitle:     "모든 기관과 사용자 관리",
 				Id:           "admin",
 				Icon:         "gicon gicon-shield",
 				Url:          setting.AppSubUrl + "/admin/users",
 				Children: []*dtos.NavLink{
 					{Text: "사용자", Id: "global-users", Url: setting.AppSubUrl + "/admin/users", Icon: "gicon gicon-user"},
-					{Text: "조직", Id: "global-orgs", Url: setting.AppSubUrl + "/admin/orgs", Icon: "gicon gicon-org"},
+					{Text: "기관", Id: "global-orgs", Url: setting.AppSubUrl + "/admin/orgs", Icon: "gicon gicon-org"},
 					{Text: "설정", Id: "server-settings", Url: setting.AppSubUrl + "/admin/settings", Icon: "gicon gicon-preferences"},
 					{Text: "통계", Id: "server-stats", Url: setting.AppSubUrl + "/admin/stats", Icon: "fa fa-fw fa-bar-chart"},
 					{Text: "스타일가이드", Id: "styleguide", Url: setting.AppSubUrl + "/styleguide", Icon: "fa fa-fw fa-eyedropper"},
