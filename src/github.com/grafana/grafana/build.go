@@ -327,7 +327,7 @@ func createPackage(options linuxPackageOptions) {
 		"-p", "./dist",
 	}
 
-	name := "ARGOS"
+	name := "argos"
 	if enterprise {
 		name += "-enterprise"
 	}

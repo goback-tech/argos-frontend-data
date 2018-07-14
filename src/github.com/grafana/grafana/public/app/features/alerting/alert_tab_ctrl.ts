@@ -335,9 +335,9 @@ export class AlertTabCtrl {
 
   delete() {
     appEvents.emit('confirm-modal', {
-      title: 'Delete Alert',
-      text: 'Are you sure you want to delete this alert rule?',
-      text2: 'You need to save dashboard for the delete to take effect',
+      title: '삭제 경고',
+      text: '이 경보 규칙을 삭제하시겠습니까?',
+      text2: '삭제사항을 적용하려면 대쉬보드를 저장해야합니다.',
       icon: 'fa-trash',
       yesText: 'Delete',
       onConfirm: () => {
@@ -384,8 +384,8 @@ export class AlertTabCtrl {
 
   clearHistory() {
     appEvents.emit('confirm-modal', {
-      title: 'Delete Alert History',
-      text: 'Are you sure you want to remove all history & annotations for this alert?',
+      title: '경보 기록 삭제',
+      text: '정말 모든 기록과 이 경보에 대한 정보를 삭제하시겠습니까?',
       icon: 'fa-trash',
       yesText: 'Yes',
       onConfirm: () => {

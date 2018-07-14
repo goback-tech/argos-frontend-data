@@ -1,13 +1,13 @@
 {
   "type": "app",
-  "name": "Grafana TestData",
+  "name": "Argos TestData",
   "id": "testdata",
 
   "info": {
-    "description": "Grafana test data app",
+    "description": "Argos test data app",
     "author": {
-      "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "name": "Argos Project",
+      "url": "https://goback.world"
     },
     "version": "1.0.17",
     "updated": "2016-09-26"

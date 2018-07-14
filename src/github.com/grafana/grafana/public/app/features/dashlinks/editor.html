@@ -15,9 +15,9 @@
         대쉬보드 링크 추가
       </a>
       <div class="grafana-info-box">
-        <h5>What are Dashboard Links?</h5>
+        <h5>대쉬보드 링크</h5>
         <p>
-					Dashboard Links allow you to place links to other dashboards and web sites directly in below the dashboard header.
+					대쉬보드 링크는 다른 대쉬보드와 웹사이트를 대쉬보드 헤더 아래에 직접 둘 수 있습니다.
         </p>
       </div>
     </div>
@@ -82,11 +82,11 @@
       </div>
 
       <div class="gf-form" ng-show="ctrl.link.type === 'dashboards'">
-        <span class="gf-form-label width-8">태그와 함께s</span>
+        <span class="gf-form-label width-8">태그추가</span>
         <bootstrap-tagsinput ng-model="ctrl.link.tags" tagclass="label label-tag" placeholder="태그 추가" style="margin-right: .25rem"></bootstrap-tagsinput>
       </div>
 
-      <gf-form-switch ng-show="ctrl.link.type === 'dashboards'" class="gf-form" label="As dropdown" checked="ctrl.link.asDropdown"
+      <gf-form-switch ng-show="ctrl.link.type === 'dashboards'" class="gf-form" label="드롭다운" checked="ctrl.link.asDropdown"
         switch-class="max-width-4" label-class="width-8"></gf-form-switch>
       <div class="gf-form" ng-show="ctrl.link.type === 'dashboards' && ctrl.link.asDropdown">
         <span class="gf-form-label width-8">제목</span>
@@ -118,7 +118,7 @@
     </div>
 
     <div class="gf-form-group">
-      <h5 class="section-heading">Include</h5>
+      <h5 class="section-heading">포함</h5>
       <div>
         <gf-form-switch class="gf-form" label="시간범위" checked="ctrl.link.keepTime" switch-class="max-width-6" label-class="width-9"></gf-form-switch>
         <gf-form-switch class="gf-form" label="변수" checked="ctrl.link.includeVars" switch-class="max-width-6" label-class="width-9"></gf-form-switch>
@@ -127,9 +127,9 @@
     </div>
   </div>
   <button class="btn btn-success" ng-if="ctrl.mode == 'new'" ng-click="ctrl.addLink()">
-    Add
+    추가
   </button>
   <button class="btn btn-success" ng-if="ctrl.mode == 'edit'" ng-click="ctrl.saveLink()">
-    Update
+    업데이트
   </button>
 </div>

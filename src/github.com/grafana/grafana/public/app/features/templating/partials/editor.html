@@ -1,30 +1,26 @@
 <div ng-controller="VariableEditorCtrl" ng-init="init()">
 
 	<h3 class="dashboard-settings__header">
-		<a ng-click="setMode('list')">Variables</a>
-		<span ng-show="mode === 'new'">&gt; New</span>
-		<span ng-show="mode === 'edit'">&gt; Edit</span>
+		<a ng-click="setMode('list')">변수들</a>
+		<span ng-show="mode === 'new'">&gt; 신규</span>
+		<span ng-show="mode === 'edit'">&gt; 수정</span>
 	</h3>
 
 	<div ng-if="mode === 'list'">
 
 		<div ng-if="variables.length === 0">
 			<div class="empty-list-cta">
-				<div class="empty-list-cta__title">There are no variables added yet</div>
+				<div class="empty-list-cta__title">아직 추가된 변수가 없습니다.</div>
 				<a ng-click="setMode('new')" class="empty-list-cta__button btn btn-xlarge btn-success">
 					<i class="gicon gicon-add-variable"></i>
-					Add variable
+					변수 추가
 				</a>
 				<div class="grafana-info-box">
-					<h5>What do variables do?</h5>
-					<p>Variables enable more interactive and dynamic dashboards. Instead of hard-coding things like server or sensor names
-					in your metric queries you can use variables in their place. Variables are shown as dropdown select boxes at the top of
-					the dashboard. These dropdowns make it easy to change the data being displayed in your dashboard.
+					<h5>변수들의 역할</h5>
+					<p>변수들은 대쉬보드에 보다 다양하고 인터랙티브한 기능을 제공합니다. 서버나 센서의 이름을 계측 쿼리에 하드코딩하는 것 대신에
+					사용할 수 있습니다. 변수들은 대쉬보드 상단에 드롭다운 메뉴에서 선택하여 확인할 수 있습니다.
 
-					Check out the
-					<a class="external-link" href="http://docs.grafana.org/reference/templating/" target="_blank">
-						Templating documentation
-					</a> for more information.
+					
 				</div>
 			</div>
 		</div>
@@ -38,8 +34,8 @@
 			<table class="filter-table filter-table--hover">
 				<thead>
 					<tr>
-						<th>Variable</th>
-						<th>Definition</th>
+						<th>변수</th>
+						<th>정의</th>
 						<th colspan="5"></th>
 					</tr>
 				</thead>
@@ -57,7 +53,7 @@
 						<td style="width: 1%"><i ng-click="_.move(variables,$index,$index+1)" ng-hide="$last" class="pointer fa fa-arrow-down"></i></td>
 						<td style="width: 1%">
 							<a ng-click="duplicate(variable)" class="btn btn-inverse btn-mini">
-								Duplicate
+								복제
 							</a>
 						</td>
 						<td style="width: 1%">
@@ -72,12 +68,12 @@
 	</div>
 
 	<form ng-if="mode === 'edit' || mode === 'new'" name="ctrl.form">
-		<h5 class="section-heading">General</h5>
+		<h5 class="section-heading">일반</h5>
 		<div class="gf-form-group">
 			<div class="gf-form-inline">
 				<div class="gf-form max-width-19">
-					<span class="gf-form-label width-6">Name</span>
-					<input type="text" class="gf-form-input" name="name" placeholder="name" ng-model='current.name' required ng-pattern="namePattern"></input>
+					<span class="gf-form-label width-6">이름</span>
+					<input type="text" class="gf-form-input" name="name" placeholder="이름" ng-model='current.name' required ng-pattern="namePattern"></input>
 				</div>
 				<div class="gf-form max-width-19">
 					<span class="gf-form-label width-6">
@@ -93,16 +89,16 @@
 			</div>
 
 			<div class="gf-form" ng-show="ctrl.form.name.$error.pattern">
-				<span class="gf-form-label gf-form-label--error">Template names cannot begin with '__', that's reserved for Grafana's global variables</span>
+				<span class="gf-form-label gf-form-label--error">템플릿이름은 '__'로 시작할 수 없습니다</span>
 			</div>
 
 			<div class="gf-form-inline">
 				<div class="gf-form max-width-19">
-					<span class="gf-form-label width-6">Label</span>
-					<input type="text" class="gf-form-input" ng-model='current.label' placeholder="optional display name"></input>
+					<span class="gf-form-label width-6">라벨</span>
+					<input type="text" class="gf-form-input" ng-model='current.label' placeholder="추가 디스플레이 이름"></input>
 				</div>
 				<div class="gf-form max-width-19">
-					<span class="gf-form-label width-6">Hide</span>
+					<span class="gf-form-label width-6">숨기기</span>
 					<div class="gf-form-select-wrapper max-width-15">
 						<select class="gf-form-input" ng-model="current.hide" ng-options="f.value as f.text for f in hideOptions"></select>
 					</div>
@@ -111,20 +107,20 @@
 		</div>
 
 		<div ng-if="current.type === 'interval'" class="gf-form-group">
-			<h5 class="section-heading">Interval Options</h5>
+			<h5 class="section-heading">인터벌 옵션</h5>
 
 			<div class="gf-form">
-				<span class="gf-form-label width-9">Values</span>
-				<input type="text" class="gf-form-input" placeholder="name" ng-model='current.query' placeholder="1m,10m,1h,6h,1d,7d" ng-model-onblur ng-change="runQuery()" required></input>
+				<span class="gf-form-label width-9">값</span>
+				<input type="text" class="gf-form-input" placeholder="이름" ng-model='current.query' placeholder="1m,10m,1h,6h,1d,7d" ng-model-onblur ng-change="runQuery()" required></input>
 			</div>
 
 			<div class="gf-form-inline">
-				<gf-form-switch class="gf-form" label="Auto Option" label-class="width-9" checked="current.auto" on-change="runQuery()">
+				<gf-form-switch class="gf-form" label="자동 옵션" label-class="width-9" checked="current.auto" on-change="runQuery()">
 				</gf-form-switch>
 
 				<div class="gf-form">
 					<span class="gf-form-label width-9" ng-show="current.auto">
-						Step count <tip>How many times should the current time range be divided to calculate the value</tip>
+						스텝 카운트 <tip>현재 시간 범위를 어떤 값으로 분할계산할지 정의</tip>
 					</span>
 					<div class="gf-form-select-wrapper max-width-10" ng-show="current.auto">
 						<select class="gf-form-input" ng-model="current.auto_count" ng-options="f for f in [1,2,3,4,5,10,20,30,40,50,100,200,300,400,500]" ng-change="runQuery()"></select>
@@ -132,7 +128,7 @@
 				</div>
 				<div class="gf-form">
 					<span class="gf-form-label" ng-show="current.auto">
-						Min interval <tip>The calculated value will not go below this threshold</tip>
+						최소 인터벌 <tip>계산된 값은 이 최소값 아래로 설정할 수 없습니다.</tip>
 					</span>
 					<input type="text" class="gf-form-input max-width-10" ng-show="current.auto" ng-model="current.auto_min" ng-change="runQuery()" placeholder="10s"></input>
 				</div>
@@ -140,27 +136,27 @@
 		</div>
 
 		<div ng-if="current.type === 'custom'" class="gf-form-group">
-			<h5 class="section-heading">Custom Options</h5>
+			<h5 class="section-heading">커스텀 옵션</h5>
 			<div class="gf-form">
-				<span class="gf-form-label width-14">Values separated by comma</span>
+				<span class="gf-form-label width-14">값은 쉼표로 구분합니다</span>
 				<input type="text" class="gf-form-input" ng-model='current.query' ng-blur="runQuery()" placeholder="1, 10, 20, myvalue" required></input>
 			</div>
 		</div>
 
 		<div ng-if="current.type === 'constant'" class="gf-form-group">
-			<h5 class="section-heading">Constant options</h5>
+			<h5 class="section-heading">고정 옵션</h5>
 			<div class="gf-form">
-				<span class="gf-form-label">Value</span>
-				<input type="text" class="gf-form-input" ng-model='current.query' ng-blur="runQuery()" placeholder="your metric prefix"></input>
+				<span class="gf-form-label">값</span>
+				<input type="text" class="gf-form-input" ng-model='current.query' ng-blur="runQuery()" placeholder="메트릭 접두어"></input>
 			</div>
 		</div>
 
 		<div ng-if="current.type === 'query'" class="gf-form-group">
-			<h5 class="section-heading">Query Options</h5>
+			<h5 class="section-heading">쿼리 옵션</h5>
 
 			<div class="gf-form-inline">
 				<div class="gf-form max-width-21">
-					<span class="gf-form-label width-7">Data source</span>
+					<span class="gf-form-label width-7">데이터소스</span>
 					<div class="gf-form-select-wrapper max-width-14">
 						<select class="gf-form-input" ng-model="current.datasource" ng-options="f.value as f.name for f in datasources" required>
 							<option value="" ng-if="false"></option>
@@ -169,9 +165,9 @@
 				</div>
 				<div class="gf-form max-width-22">
 					<span class="gf-form-label width-7">
-						Refresh
+						갱신
 						<info-popover mode="right-normal">
-							When to update the values of this variable.
+							이 변수의 값을 업데이트할 때
 						</info-popover>
 					</span>
 					<div class="gf-form-select-wrapper width-15">
@@ -180,23 +176,23 @@
 				</div>
 			</div>
 			<div class="gf-form">
-				<span class="gf-form-label width-7">Query</span>
-				<input type="text" class="gf-form-input" ng-model='current.query' placeholder="metric name or tags query" ng-model-onblur ng-change="runQuery()" required></input>
+				<span class="gf-form-label width-7">쿼리</span>
+				<input type="text" class="gf-form-input" ng-model='current.query' placeholder="메트릭 이름 혹은 태그 쿼리" ng-model-onblur ng-change="runQuery()" required></input>
 			</div>
 			<div class="gf-form">
 				<span class="gf-form-label width-7">
 					Regex
 					<info-popover mode="right-normal">
-						Optional, if you want to extract part of a series name or metric node segment.
+						옵션, 만약 부분 추출을 원하면 사용.
 					</info-popover>
 				</span>
 				<input type="text" class="gf-form-input" ng-model='current.regex' placeholder="/.*-(.*)-.*/" ng-model-onblur ng-change="runQuery()"></input>
 			</div>
 			<div class="gf-form max-width-21">
 				<span class="gf-form-label width-7">
-					Sort
+					정렬
 					<info-popover mode="right-normal">
-						How to sort the values of this variable.
+						이 변수의 값을 어떻게 정렬할지 정의
 					</info-popover>
 				</span>
 				<div class="gf-form-select-wrapper max-width-14">
@@ -206,7 +202,7 @@
 		</div>
 
 		<div ng-show="current.type === 'datasource'" class="gf-form-group">
-			<h5 class="section-heading">Data source options</h5>
+			<h5 class="section-heading">데이터 소스 옵션</h5>
 
 			<div class="gf-form">
 				<label class="gf-form-label width-12">Type</label>
@@ -217,12 +213,12 @@
 
 			<div class="gf-form">
 				<label class="gf-form-label width-12">
-					Instance name filter
+					인스턴트 이름 필터
 					<info-popover mode="right-normal">
-						Regex filter for which data source instances to choose from in
-						the variable value dropdown. Leave empty for all.
+						드롭다운 변수값의 데이터 소스 인스턴스의 Regex 필터.
+						빈 값은 모두 선택
 						<br><br>
-						Example: <code>/^prod/</code>
+						예: <code>/^prod/</code>
 
 					</info-popover>
 				</label>
@@ -231,9 +227,9 @@
 		</div>
 
 		<div ng-if="current.type === 'adhoc'" class="gf-form-group">
-			<h5 class="section-heading">Options</h5>
+			<h5 class="section-heading">옵션</h5>
 			<div class="gf-form max-width-21">
-				<span class="gf-form-label width-8">Data source</span>
+				<span class="gf-form-label width-8">데이터소스</span>
 				<div class="gf-form-select-wrapper max-width-14">
 					<select class="gf-form-input" ng-model="current.datasource" ng-options="f.value as f.name for f in datasources" required ng-change="validate()">
 						<option value="" ng-if="false"></option>
@@ -243,17 +239,17 @@
 		</div>
 
 		<div class="section gf-form-group" ng-show="variableTypes[current.type].supportsMulti">
-			<h5 class="section-heading">Selection Options</h5>
+			<h5 class="section-heading">선택 옵션</h5>
 			<div class="section">
 				<gf-form-switch class="gf-form"
-										label="Multi-value"
+										label="다양한-값"
 					label-class="width-10"
-		 tooltip="Enables multiple values to be selected at the same time"
+		 tooltip="동시 선택된 다양한 값을 활성"
 	 checked="current.multi"
 	on-change="runQuery()">
 				</gf-form-switch>
 				<gf-form-switch class="gf-form"
-										label="Include All option"
+										label="모든 옵션 포함"
 					label-class="width-10"
 		 checked="current.includeAll"
 	 on-change="runQuery()">
@@ -266,12 +262,12 @@
 		</div>
 
 		<div class="gf-form-group" ng-if="current.type === 'query'">
-			<h5>Value groups/tags (Experimental feature)</h5>
-			<gf-form-switch class="gf-form" label="Enabled" label-class="width-10" checked="current.useTags" on-change="runQuery()">
+			<h5>값 그룹/태그 (실험 기능)</h5>
+			<gf-form-switch class="gf-form" label="활성" label-class="width-10" checked="current.useTags" on-change="runQuery()">
 			</gf-form-switch>
 			<div class="gf-form last" ng-if="current.useTags">
-				<span class="gf-form-label width-10">Tags query</span>
-				<input type="text" class="gf-form-input" ng-model='current.tagsQuery' placeholder="metric name or tags query" ng-model-onblur></input>
+				<span class="gf-form-label width-10">태그쿼리</span>
+				<input type="text" class="gf-form-input" ng-model='current.tagsQuery' placeholder="메트릭 이름 혹은 태그쿼리" ng-model-onblur></input>
 			</div>
 			<div class="gf-form" ng-if="current.useTags">
 				<li class="gf-form-label width-10">Tag values query</li>
@@ -286,7 +282,7 @@
           <span class="gf-form-label">{{option.text}}</span>
         </div>
         <div class="gf-form" ng-if= "current.options.length > optionsLimit">
-          <a class="gf-form-label btn-secondary" ng-click="showMoreOptions()">Show more</a>
+          <a class="gf-form-label btn-secondary" ng-click="showMoreOptions()">더 보기</a>
         </div>
 			</div>
 		</div>
@@ -296,8 +292,8 @@
 		</div>
 
 		<div class="gf-form-button-row p-y-0">
-			<button type="submit" class="btn btn-success" ng-show="mode === 'edit'" ng-click="update();">Update</button>
-			<button type="submit" class="btn btn-success" ng-show="mode === 'new'" ng-click="add();">Add</button>
+			<button type="submit" class="btn btn-success" ng-show="mode === 'edit'" ng-click="update();">업데이트</button>
+			<button type="submit" class="btn btn-success" ng-show="mode === 'new'" ng-click="add();">추가</button>
 		</div>
 
 	</form>

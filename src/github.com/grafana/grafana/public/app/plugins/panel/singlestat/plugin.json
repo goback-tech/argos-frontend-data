@@ -1,12 +1,12 @@
 {
   "type": "panel",
-  "name": "Singlestat",
+  "name": "싱글스탯",
   "id": "singlestat",
 
   "info": {
-    "description": "Singlestat Panel for Grafana",
+    "description": "싱글스탯",
     "author": {
-      "name": "Grafana Project",
+      "name": "Argos Project",
       "url": "https://grafana.com"
 },
     "logos": {

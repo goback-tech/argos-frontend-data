@@ -12,27 +12,27 @@ func init() {
 	alerting.RegisterNotifier(&alerting.NotifierPlugin{
 		Type:        "webhook",
 		Name:        "webhook",
-		Description: "Sends HTTP POST request to a URL",
+		Description: "HTTP POST를 URL로 보냄",
 		Factory:     NewWebHookNotifier,
 		OptionsTemplate: `
-      <h3 class="page-heading">Webhook settings</h3>
+      <h3 class="page-heading">Webhook 설정</h3>
       <div class="gf-form">
-        <span class="gf-form-label width-10">Url</span>
+        <span class="gf-form-label width-10">URL(주소)</span>
         <input type="text" required class="gf-form-input max-width-26" ng-model="ctrl.model.settings.url"></input>
       </div>
       <div class="gf-form">
-        <span class="gf-form-label width-10">Http Method</span>
+        <span class="gf-form-label width-10">Http 메서드</span>
         <div class="gf-form-select-wrapper width-14">
           <select class="gf-form-input" ng-model="ctrl.model.settings.httpMethod" ng-options="t for t in ['POST', 'PUT']">
           </select>
         </div>
       </div>
       <div class="gf-form">
-        <span class="gf-form-label width-10">Username</span>
+        <span class="gf-form-label width-10">사용자명</span>
         <input type="text" class="gf-form-input max-width-14" ng-model="ctrl.model.settings.username"></input>
       </div>
       <div class="gf-form">
-        <span class="gf-form-label width-10">Password</span>
+        <span class="gf-form-label width-10">비밀번호</span>
         <input type="text" class="gf-form-input max-width-14" ng-model="ctrl.model.settings.password"></input>
       </div>
     `,

@@ -1,12 +1,12 @@
 {
   "type": "panel",
-  "name": "Dashboard list",
+  "name": "대쉬보드 목록",
   "id": "dashlist",
 
   "info": {
-    "description": "List of dynamic links to other dashboards",
+    "description": "대쉬보드 목록 정보",
     "author": {
-      "name": "Grafana Project",
+      "name": "Argos Project",
       "url": "https://grafana.com"
 },
     "logos": {

@@ -4,9 +4,9 @@
   "id": "elasticsearch",
 
   "info": {
-    "description": "Elasticsearch Data Source for Grafana",
+    "description": "Elasticsearch 데이터소스",
     "author": {
-      "name": "Grafana Project",
+      "name": "Argos Project",
       "url": "https://grafana.com"
     },
     "keywords": ["elasticsearch"],

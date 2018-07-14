@@ -1,11 +1,11 @@
 {
   "type": "panel",
-  "name": "Text",
+  "name": "텍스트",
   "id": "text",
 
   "info": {
     "author": {
-      "name": "Grafana Project",
+      "name": "Argos Project",
       "url": "https://grafana.com"
 },
     "logos": {

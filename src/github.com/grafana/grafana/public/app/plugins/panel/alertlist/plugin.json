@@ -1,12 +1,12 @@
 {
   "type": "panel",
-  "name": "Alert List",
+  "name": "알람 목록",
   "id": "alertlist",
 
   "info": {
-    "description": "Shows list of alerts and their current status",
+    "description": "알람 목록과 상태 정보",
     "author": {
-      "name": "Grafana Project",
+      "name": "Argos Project",
       "url": "https://grafana.com"
     },
     "logos": {

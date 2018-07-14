@@ -15,7 +15,7 @@
 		</button>
 		<button class="btn btn-inverse" ng-click="ctrl.openSaveAsModal()" ng-show="ctrl.canSaveAs">
 			<i class="fa fa-copy"></i>
-			다른이름으로저장...
+			다른이름저장...
 		</button>
 		<button class="btn btn-danger" ng-click="ctrl.deleteDashboard()" ng-show="ctrl.canDelete">
 			<i class="fa fa-trash"></i>
@@ -40,10 +40,10 @@
 		</div>
 		<div class="gf-form">
 			<label class="gf-form-label width-7">
-				Tags
-				<info-popover mode="right-normal">Press enter to add a tag</info-popover>
+				태그
+				<info-popover mode="right-normal">태그를 추가하세요.</info-popover>
 			</label>
-			<bootstrap-tagsinput ng-model="ctrl.dashboard.tags" tagclass="label label-tag" placeholder="add tags">
+			<bootstrap-tagsinput ng-model="ctrl.dashboard.tags" tagclass="label label-tag" placeholder="태그 추가">
 			</bootstrap-tagsinput>
 		</div>
 		<folder-picker initial-title="ctrl.dashboard.meta.folderTitle"
@@ -53,7 +53,7 @@
 									 is-valid-selection="true"
 									 label-class="width-7">
 		</folder-picker>
-		<gf-form-switch class="gf-form" label="Editable" tooltip="Uncheck, then save and reload to disable all dashboard editing" checked="ctrl.dashboard.editable" label-class="width-7">
+		<gf-form-switch class="gf-form" label="수정가능" tooltip="체크를 하지 않으면 모든 대쉬보드의 수정이 되지 않습니다." checked="ctrl.dashboard.editable" label-class="width-7">
 		</gf-form-switch>
 	</div>
 

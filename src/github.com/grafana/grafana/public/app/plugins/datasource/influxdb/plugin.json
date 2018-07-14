@@ -13,9 +13,9 @@
   },
 
   "info": {
-    "description": "InfluxDB Data Source for Grafana",
+    "description": "InfluxDB 데이터소스",
     "author": {
-      "name": "Grafana Project",
+      "name": "Argos Project",
       "url": "https://grafana.com"
     },
     "logos": {

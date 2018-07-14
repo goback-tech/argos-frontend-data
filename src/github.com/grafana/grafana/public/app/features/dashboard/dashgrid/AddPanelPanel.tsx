@@ -59,7 +59,7 @@ export class AddPanelPanel extends React.Component<AddPanelPanelProps, AddPanelP
       .value();
 
     // add special row type
-    panels.push({ id: 'row', name: '열', sort: 8, info: { logos: { small: 'public/img/icn-row.svg' } } });
+    panels.push({ id: 'row', name: '행', sort: 8, info: { logos: { small: 'public/img/icn-row.svg' } } });
 
     panels = this.filterPanels(panels, filter);
 

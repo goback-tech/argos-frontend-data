@@ -80,7 +80,7 @@ class AddPermissions extends Component<IProps, any> {
           <i className="fa fa-close" />
         </button>
         <form name="addPermission" onSubmit={this.handleSubmit}>
-          <h6>Add Permission For</h6>
+          <h6>권한 추가</h6>
           <div className="gf-form-inline">
             <div className="gf-form">
               <div className="gf-form-select-wrapper">

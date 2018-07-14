@@ -2,17 +2,17 @@
 
 <div class="page-container page-body">
 
-  <h3 class="page-sub-heading" ng-hide="ctrl.isNew">Edit Notification Channel</h3>
-  <h3 class="page-sub-heading" ng-show="ctrl.isNew">New Notification Channel</h3>
+  <h3 class="page-sub-heading" ng-hide="ctrl.isNew">알림 채널 수정l</h3>
+  <h3 class="page-sub-heading" ng-show="ctrl.isNew">새 알림 채널</h3>
 
   <form name="ctrl.theForm" ng-if="ctrl.notifiers">
     <div class="gf-form-group">
       <div class="gf-form">
-        <span class="gf-form-label width-12">Name</span>
+        <span class="gf-form-label width-12">이름</span>
         <input type="text" required class="gf-form-input max-width-15" ng-model="ctrl.model.name" required></input>
       </div>
       <div class="gf-form">
-        <span class="gf-form-label width-12">Type</span>
+        <span class="gf-form-label width-12">타입</span>
         <div class="gf-form-select-wrapper width-15">
           <select class="gf-form-input" ng-model="ctrl.model.type" ng-options="t.type as t.name for t in ctrl.notifiers" ng-change="ctrl.typeChanged(notification, $index)">
           </select>
@@ -20,17 +20,17 @@
       </div>
       <gf-form-switch
           class="gf-form"
-          label="Send on all alerts"
+          label="모든 경보를 보냄"
           label-class="width-12"
           checked="ctrl.model.isDefault"
-          tooltip="Use this notification for all alerts">
+          tooltip="이 알림을 모든 경보(알람) 에 적용">
       </gf-form-switch>
       <gf-form-switch
           class="gf-form"
-          label="Include image"
+          label="이미지첨부"
           label-class="width-12"
           checked="ctrl.model.settings.uploadImage"
-          tooltip="Captures an image and include it in the notification">
+          tooltip="이미지를 캡쳐하여 알림에 첨부">
       </gf-form-switch>
     </div>
 
@@ -38,9 +38,9 @@
     </div>
 
     <div class="gf-form-group gf-form-button-row">
-			<button type="submit" ng-click="ctrl.save()" class="btn btn-success width-7">Save</button>
-			<button type="submit" ng-click="ctrl.testNotification()" class="btn btn-secondary width-7">Send Test</button>
-			<a href="alerting/notifications" class="btn btn-inverse">Back</a>
+			<button type="submit" ng-click="ctrl.save()" class="btn btn-success width-7">저장</button>
+			<button type="submit" ng-click="ctrl.testNotification()" class="btn btn-secondary width-7">테스트보내기</button>
+			<a href="alerting/notifications" class="btn btn-inverse">뒤로</a>
     </div>
   </form>
 </div>

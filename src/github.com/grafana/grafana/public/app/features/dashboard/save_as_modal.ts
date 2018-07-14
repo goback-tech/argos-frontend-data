@@ -5,7 +5,7 @@ const template = `
 	<div class="modal-header">
 		<h2 class="modal-header-title">
 			<i class="fa fa-copy"></i>
-			<span class="p-l-1">다른이름으로 저장...</span>
+			<span class="p-l-1">다른이름 저장...</span>
 		</h2>
 
 		<a class="modal-header-close" ng-click="ctrl.dismiss();">

@@ -191,7 +191,7 @@ describe('SearchSrv', () => {
             type: 'dash-db',
             folderId: 1,
             folderUid: 'uid',
-            folderTitle: 'folder1',
+            folderTitle: '폴더1',
             folderUrl: '/dashboards/f/uid/folder1',
           },
         ])

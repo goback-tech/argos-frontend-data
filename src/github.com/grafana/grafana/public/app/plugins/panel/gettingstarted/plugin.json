@@ -1,13 +1,13 @@
 {
   "type": "panel",
-  "name": "Getting Started",
+  "name": "시작정보",
   "id": "gettingstarted",
 
   "hideFromList": true,
 
   "info": {
     "author": {
-      "name": "Grafana Project",
+      "name": "Argos Project",
       "url": "https://grafana.com"
     },
     "logos": {

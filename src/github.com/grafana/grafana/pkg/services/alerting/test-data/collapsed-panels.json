@@ -7,7 +7,7 @@
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
+        "name": "주석과 경보",
         "type": "dashboard"
       }
     ]
@@ -26,7 +26,7 @@
         "y": 0
       },
       "id": 9,
-      "title": "Row title",
+      "title": "행 제목",
       "type": "row"
     },
     {

@@ -19,7 +19,7 @@
     {
       "type": "panel",
       "id": "graph",
-      "name": "Graph",
+      "name": "그래프",
       "version": "5.0.0"
     },
     {
@@ -31,7 +31,7 @@
     {
       "type": "panel",
       "id": "table",
-      "name": "Table",
+      "name": "테이블",
       "version": "5.0.0"
     }
   ],
@@ -91,7 +91,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "total avg",
+          "alias": "총 평균",
           "fill": 0,
           "pointradius": 3,
           "points": true
@@ -336,7 +336,7 @@
       },
       "styles": [
         {
-          "alias": "Time",
+          "alias": "시간",
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "pattern": "Time",
           "type": "date"
@@ -364,7 +364,7 @@
           "refId": "A"
         }
       ],
-      "title": "Values",
+      "title": "값",
       "transform": "table",
       "type": "table"
     }

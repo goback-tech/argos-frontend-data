@@ -100,14 +100,14 @@ describe('ManageDashboards', () => {
           items: [
             {
               id: 399,
-              title: 'Dashboard Test',
+              title: '대쉬보드테스트',
               url: 'dashboard/db/dashboard-test',
               icon: 'fa fa-folder',
               tags: [],
               isStarred: false,
               folderId: 410,
               folderUid: 'uid',
-              folderTitle: 'Folder',
+              folderTitle: '폴더',
               folderUrl: '/dashboards/f/uid/folder',
             },
             {

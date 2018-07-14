@@ -1,12 +1,12 @@
 {
   "type": "panel",
-  "name": "Graph",
+  "name": "그래프",
   "id": "graph",
 
   "info": {
-    "description": "Graph Panel for Grafana",
+    "description": "그래프 패널",
     "author": {
-      "name": "Grafana Project",
+      "name": "Argos Project",
       "url": "https://grafana.com"
 },
     "logos": {

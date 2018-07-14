@@ -17,9 +17,9 @@
   },
 
   "info": {
-    "description": "Graphite Data Source for Grafana",
+    "description": "Graphite 데이터 소스",
     "author": {
-      "name": "Grafana Project",
+      "name": "Argos Project",
       "url": "https://grafana.com"
     },
     "logos": {

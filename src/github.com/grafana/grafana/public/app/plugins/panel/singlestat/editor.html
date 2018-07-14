@@ -64,14 +64,14 @@
     </div>
     <div class="gf-form-inline">
       <div class="gf-form max-width-21">
-        <label class="gf-form-label width-8">Thresholds
-          <tip>Define two threshold values&lt;br /&gt; 50,80 will produce: value &lt; 50 = Green, 50 &lt;= value &lt; 80 = Yellow, value &gt;= 80 = Red</tip>
+        <label class="gf-form-label width-8">임계값
+          <tip>2개의 임계값을 설정&lt;br /&gt; 50,80 값: &lt; 50 = 녹색, 50 &lt;= 값 &lt; 80 = 노란색, 값 &gt;= 80 = 붉은색</tip>
         </label>
         <input type="text" class="gf-form-input" ng-model="ctrl.panel.thresholds" ng-blur="ctrl.render()" placeholder="50,80"></input>
       </div>
     </div>
     <div class="gf-form">
-      <label class="gf-form-label width-8">Colors</label>
+      <label class="gf-form-label width-8">색상</label>
       <span class="gf-form-label" ng-repeat="color in ctrl.panel.colors track by $index">
         <color-picker color="color" onChange="ctrl.onColorChange($index)"></color-picker>
       </span>
@@ -84,18 +84,18 @@
   </div>
 
   <div class="section gf-form-group">
-    <h5 class="section-heading">Spark lines</h5>
+    <h5 class="section-heading">스파크라인</h5>
     <gf-form-switch class="gf-form" label-class="width-9" label="Show" checked="ctrl.panel.sparkline.show" on-change="ctrl.render()"></gf-form-switch>
     <div ng-if="ctrl.panel.sparkline.show">
       <gf-form-switch class="gf-form" label-class="width-9" label="Full height" checked="ctrl.panel.sparkline.full" on-change="ctrl.render()"></gf-form-switch>
       <div class="gf-form">
-        <label class="gf-form-label width-9">Line Color</label>
+        <label class="gf-form-label width-9">라인색상</label>
         <span class="gf-form-label">
           <color-picker color="ctrl.panel.sparkline.lineColor" onChange="ctrl.onSparklineColorChange"></color-picker>
         </span>
       </div>
       <div class="gf-form">
-        <label class="gf-form-label width-9">Fill Color</label>
+        <label class="gf-form-label width-9">색상채우기</label>
         <span class="gf-form-label">
           <color-picker color="ctrl.panel.sparkline.fillColor" onChange="ctrl.onSparklineFillChange"></color-picker>
         </span>
@@ -104,19 +104,19 @@
   </div>
 
   <div class="section gf-form-group">
-    <h5 class="section-heading">Gauge</h5>
+    <h5 class="section-heading">게이지</h5>
     <gf-form-switch class="gf-form" label-class="width-10" switch-class="max-width-6" label="Show" checked="ctrl.panel.gauge.show" on-change="ctrl.render()"></gf-form-switch>
     <div ng-if="ctrl.panel.gauge.show">
       <div class="gf-form">
-        <label class="gf-form-label width-10">Min</label>
+        <label class="gf-form-label width-10">최소</label>
         <input type="number" class="gf-form-input width-6" placeholder="0" data-placement="right" ng-model="ctrl.panel.gauge.minValue" ng-change="ctrl.refresh()" ng-model-onblur>
         <label class="gf-form-label alert-state-critical" ng-show="ctrl.invalidGaugeRange">
           &nbsp; <i class="fa fa-warning"></i>
-          Min value is bigger than max.
+          최소값은 최대값보다 작아야합니다.
         </label>
       </div>
       <div class="gf-form">
-        <label class="gf-form-label width-10">Max</label>
+        <label class="gf-form-label width-10">최대</label>
         <input type="number" class="gf-form-input width-6" placeholder="0" data-placement="right" ng-model="ctrl.panel.gauge.maxValue" ng-change="ctrl.refresh()" ng-model-onblur>
       </div>
       <gf-form-switch class="gf-form" label-class="width-10" switch-class="max-width-6" label="Threshold labels" checked="ctrl.panel.gauge.thresholdLabels" on-change="ctrl.render()"></gf-form-switch>

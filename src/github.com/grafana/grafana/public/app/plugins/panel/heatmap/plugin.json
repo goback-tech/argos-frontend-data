@@ -1,10 +1,10 @@
 {
   "type": "panel",
-  "name": "Heatmap",
+  "name": "히트맵",
   "id": "heatmap",
 
   "info": {
-    "description": "Heatmap Panel for Grafana",
+    "description": "히트맵 패널",
     "author": {
       "name": "Grafana Project",
       "url": "https://grafana.com"
