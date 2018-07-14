@@ -43,13 +43,13 @@ export class BackendSrv {
       return;
     }
 
-    var data = err.data || { message: 'Unexpected error' };
+    var data = err.data || { message: '예상치 않은 에러발생' };
     if (_.isString(data)) {
       data = { message: data };
     }
 
     if (err.status === 422) {
-      this.alertSrv.set('Validation failed', data.message, 'warning', 4000);
+      this.alertSrv.set('Validation failed', data.message, '경고', 4000);
       throw data;
     }
 
