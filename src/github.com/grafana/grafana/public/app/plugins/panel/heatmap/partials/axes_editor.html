@@ -17,22 +17,22 @@
         </div>
       </div>
       <div class="gf-form">
-        <label class="gf-form-label width-8">Y-Min</label>
+        <label class="gf-form-label width-8">Y-최소</label>
         <input type="text" class="gf-form-input width-12" placeholder="auto" empty-to-null ng-model="ctrl.panel.yAxis.min" ng-change="ctrl.render()" ng-model-onblur>
       </div>
       <div class="gf-form">
-        <label class="gf-form-label width-8">Y-Max</label>
+        <label class="gf-form-label width-8">Y-최대</label>
         <input type="text" class="gf-form-input width-12" placeholder="auto" empty-to-null ng-model="ctrl.panel.yAxis.max" ng-change="ctrl.render()" ng-model-onblur>
       </div>
     </div>
     <div class="gf-form">
-      <label class="gf-form-label width-8">Decimals</label>
+      <label class="gf-form-label width-8">소수</label>
       <input type="number" class="gf-form-input width-12" placeholder="auto" data-placement="right"
       bs-tooltip="'Override automatic decimal precision for axis.'"
       ng-model="ctrl.panel.yAxis.decimals" ng-change="ctrl.render()" ng-model-onblur>
     </div>
     <div class="gf-form" ng-if="ctrl.panel.dataFormat == 'tsbuckets'">
-      <label class="gf-form-label width-8">Bucket bound</label>
+      <label class="gf-form-label width-8">버켓 바운드</label>
       <div class="gf-form-select-wrapper max-width-12">
         <select class="gf-form-input"
           ng-model="ctrl.panel.yBucketBound" ng-options="v as k for (k, v) in editor.yBucketBoundModes" ng-change="ctrl.render()"
@@ -43,13 +43,13 @@
   </div>
 
   <div class="section gf-form-group" ng-if="ctrl.panel.dataFormat == 'timeseries'">
-    <h5 class="section-heading">Buckets</h5>
+    <h5 class="section-heading">버켓</h5>
     <div class="gf-form-inline">
       <div class="gf-form">
-        <label class="gf-form-label width-5">Y Axis</label>
+        <label class="gf-form-label width-5">Y 축</label>
       </div>
       <div class="gf-form" ng-show="ctrl.panel.yAxis.logBase === 1">
-        <label class="gf-form-label width-5">Buckets</label>
+        <label class="gf-form-label width-5">버켓</label>
         <input type="number" class="gf-form-input width-5" placeholder="auto" data-placement="right"
                                                                               bs-tooltip="'Number of buckets for Y axis.'"
                                                                               ng-model="ctrl.panel.yBucketNumber" ng-change="ctrl.refresh()" ng-model-onblur>

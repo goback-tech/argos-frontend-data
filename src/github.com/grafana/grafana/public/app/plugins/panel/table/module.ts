@@ -66,12 +66,12 @@ class TablePanelCtrl extends MetricsPanelCtrl {
   }
 
   onInitEditMode() {
-    this.addEditorTab('Options', tablePanelEditor, 2);
-    this.addEditorTab('Column Styles', columnOptionsTab, 3);
+    this.addEditorTab('옵션', tablePanelEditor, 2);
+    this.addEditorTab('열 스타일', columnOptionsTab, 3);
   }
 
   onInitPanelActions(actions) {
-    actions.push({ text: 'Export CSV', click: 'ctrl.exportCsv()' });
+    actions.push({ text: 'CSV 추출', click: 'ctrl.exportCsv()' });
   }
 
   issueQueries(datasource) {
