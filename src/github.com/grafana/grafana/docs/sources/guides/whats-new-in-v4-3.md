@@ -12,7 +12,7 @@ weight = -2
 
 ## What's New in Grafana v4.3
 
-Grafana v4.3 Beta is now [available for download](https://grafana.com/grafana/download/4.3.0-beta1).
+Grafana v4.3 Beta is now [available for download](https://argos.goback.world/grafana/download/4.3.0-beta1).
 
 ## Release Highlights
 
@@ -54,7 +54,7 @@ The Heatmap panel also works with Elasticsearch Histogram Aggregations for more 
 This release includes a [new core data source for MySQL](http://docs.grafana.org/features/datasources/mysql/). You can write any possible MySQL query and format it as either Time Series or Table Data allowing it be used with the Graph Panel, Table Panel and SingleStat Panel.
 
 We are still working on the MySQL data source. As it's missing some important features, like templating and macros and future changes could be breaking, we are
-labeling the state of the data source as Alpha. Instead of holding up the release of v4.3 we are including it in its current shape to get some early feedback.  So please try it out and let us know what you think on [twitter](https://twitter.com/intent/tweet?text=.%40grafana&source=4_3_beta_blog&related=blog) or on our [community forum](https://community.grafana.com/c/releases). Is this a feature that you would use? How can we make it better?
+labeling the state of the data source as Alpha. Instead of holding up the release of v4.3 we are including it in its current shape to get some early feedback.  So please try it out and let us know what you think on [twitter](https://twitter.com/intent/tweet?text=.%40grafana&source=4_3_beta_blog&related=blog) or on our [community forum](https://community.argos.goback.world/c/releases). Is this a feature that you would use? How can we make it better?
 
 **The query editor can show the generated and interpolated SQL that is sent to the MySQL server.**
 
@@ -97,9 +97,9 @@ Lots more enhancements and fixes can be found in the [Changelog](https://github.
 
 ## Download
 
-Head to the [v4.3 download page](https://grafana.com/grafana/download) for download links & instructions.
+Head to the [v4.3 download page](https://argos.goback.world/grafana/download) for download links & instructions.
 
 ## Thanks
 
-A big thanks to all the Grafana users who contribute by submitting PRs, bug reports, helping out on our [community site](https://community.grafana.com/) and providing feedback!
+A big thanks to all the Grafana users who contribute by submitting PRs, bug reports, helping out on our [community site](https://community.argos.goback.world/) and providing feedback!
 

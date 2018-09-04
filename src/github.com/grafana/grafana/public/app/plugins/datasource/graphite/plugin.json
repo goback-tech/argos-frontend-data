@@ -20,7 +20,7 @@
     "description": "Graphite 데이터 소스",
     "author": {
       "name": "Argos Project",
-      "url": "https://grafana.com"
+      "url": "https://argos.goback.world"
     },
     "logos": {
       "small": "img/graphite_logo.png",
@@ -28,7 +28,7 @@
     },
     "links": [
       {"name": "Graphite", "url": "https://graphiteapp.org/"},
-      {"name": "Graphite 1.1 Release", "url": "https://grafana.com/blog/2018/01/11/graphite-1.1-teaching-an-old-dog-new-tricks/"}
+      {"name": "Graphite 1.1 Release", "url": "https://argos.goback.world/blog/2018/01/11/graphite-1.1-teaching-an-old-dog-new-tricks/"}
     ],
     "version": "5.0.0"
   }

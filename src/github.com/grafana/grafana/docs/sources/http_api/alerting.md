@@ -64,7 +64,7 @@ Content-Type: application/json
     "evalDate": "0001-01-01T00:00:00Z",
     "evalData": null,
     "executionError": "",
-    "url": "http://grafana.com/dashboard/db/sensors"
+    "url": "http://argos.goback.world/dashboard/db/sensors"
   }
 ]
 ```
@@ -108,7 +108,7 @@ Content-Type: application/json
     }
   ],
   "executionError": "",
-  "url": "http://grafana.com/dashboard/db/sensors"
+  "url": "http://argos.goback.world/dashboard/db/sensors"
 }
 ```
 
@@ -234,7 +234,7 @@ Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
   "type":  "email", //Required
   "isDefault": false,
   "settings": {
-    "addresses": "carl@grafana.com;dev@grafana.com"
+    "addresses": "carl@argos.goback.world;dev@argos.goback.world"
   }
 }
 ```
@@ -249,7 +249,7 @@ Content-Type: application/json
   "name": "new alert notification",
   "type": "email",
   "isDefault": false,
-  "settings": { addresses: "carl@grafana.com;dev@grafana.com"} }
+  "settings": { addresses: "carl@argos.goback.world;dev@argos.goback.world"} }
   "created": "2017-01-01 12:34",
   "updated": "2017-01-01 12:34"
 }
@@ -273,7 +273,7 @@ Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
   "type":  "email", //Required
   "isDefault": false,
   "settings": {
-    "addresses: "carl@grafana.com;dev@grafana.com"
+    "addresses: "carl@argos.goback.world;dev@argos.goback.world"
   }
 }
 ```
@@ -288,7 +288,7 @@ Content-Type: application/json
   "name": "new alert notification",
   "type": "email",
   "isDefault": false,
-  "settings": { addresses: "carl@grafana.com;dev@grafana.com"} }
+  "settings": { addresses: "carl@argos.goback.world;dev@argos.goback.world"} }
   "created": "2017-01-01 12:34",
   "updated": "2017-01-01 12:34"
 }

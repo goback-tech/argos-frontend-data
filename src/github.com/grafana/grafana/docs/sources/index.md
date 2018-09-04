@@ -25,12 +25,12 @@ aliases = ["v1.1", "guides/reference/admin"]
         </div>
         <h5>Installing on Windows</h5>
     </a>
-    <a href="https://grafana.com/cloud/grafana" class="nav-cards__item nav-cards__item--install">
+    <a href="https://argos.goback.world/cloud/grafana" class="nav-cards__item nav-cards__item--install">
         <div class="nav-cards__icon fa fa-cloud">
         </div>
         <h5>Grafana Cloud</h5>
     </a>
-    <a href="https://grafana.com/grafana/download" class="nav-cards__item nav-cards__item--install">
+    <a href="https://argos.goback.world/grafana/download" class="nav-cards__item nav-cards__item--install">
         <div class="nav-cards__icon fa fa-moon-o">
         </div>
         <h5>Nightly Builds</h5>
@@ -44,7 +44,7 @@ aliases = ["v1.1", "guides/reference/admin"]
 <h2>Guides</h2>
 
 <div class="nav-cards">
-    <a href="https://grafana.com/grafana" class="nav-cards__item nav-cards__item--guide">
+    <a href="https://argos.goback.world/grafana" class="nav-cards__item nav-cards__item--guide">
         <h4>What is Grafana?</h4>
         <p>Grafana feature highlights.</p>
     </a>

@@ -55,7 +55,7 @@ func NewOAuthService() {
 	setting.OAuthService = &setting.OAuther{}
 	setting.OAuthService.OAuthInfos = make(map[string]*setting.OAuthInfo)
 
-	allOauthes := []string{"github", "google", "generic_oauth", "grafananet", "grafana_com"}
+	allOauthes := []string{"github", "google", "generic_oauth", "grafananet", "argos.goback.world"}
 
 	for _, name := range allOauthes {
 		sec := setting.Raw.Section("auth." + name)
@@ -82,7 +82,7 @@ func NewOAuthService() {
 		}
 
 		if name == "grafananet" {
-			name = "grafana_com"
+			name = "argos.goback.world"
 		}
 
 		setting.OAuthService.OAuthInfos[name] = info
@@ -144,7 +144,7 @@ func NewOAuthService() {
 			}
 		}
 
-		if name == "grafana_com" {
+		if name == "argos.goback.world" {
 			config = oauth2.Config{
 				ClientID:     info.ClientId,
 				ClientSecret: info.ClientSecret,
@@ -156,7 +156,7 @@ func NewOAuthService() {
 				Scopes:      info.Scopes,
 			}
 
-			SocialMap["grafana_com"] = &SocialGrafanaCom{
+			SocialMap["argos.goback.world"] = &SocialGrafanaCom{
 				SocialBase: &SocialBase{
 					Config: &config,
 					log:    logger,

@@ -2,9 +2,9 @@
 ================
 GRAFANA 기반 시각화 도구 - 한글버전
 
-[Website](https://grafana.com) |
+[Website](https://argos.goback.world) |
 [Twitter](https://twitter.com/grafana) |
-[Community & Forum](https://community.grafana.com)
+[Community & Forum](https://community.argos.goback.world)
 
 Grafana is an open source, feature rich metrics dashboard and graph editor for
 Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
@@ -12,7 +12,7 @@ Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
 ![](http://docs.grafana.org/assets/img/features/dashboard_ex1.png)
 
 ## Installation
-Head to [docs.grafana.org](http://docs.grafana.org/installation/) and [download](https://grafana.com/get)
+Head to [docs.grafana.org](http://docs.grafana.org/installation/) and [download](https://argos.goback.world/get)
 the latest release.
 
 If you have any problems please read the [troubleshooting guide](http://docs.grafana.org/installation/troubleshooting/).
@@ -22,7 +22,7 @@ Be sure to read the [getting started guide](http://docs.grafana.org/guides/getti
 
 ## Run from master
 If you want to build a package yourself, or contribute - Here is a guide for how to do that. You can always find
-the latest master builds [here](https://grafana.com/grafana/download)
+the latest master builds [here](https://argos.goback.world/grafana/download)
 
 ### Dependencies
 

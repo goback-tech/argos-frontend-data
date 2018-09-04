@@ -9,15 +9,15 @@ weight = 2
 
 # Plugin Review Guidelines
 
-The Grafana team reviews all plugins that are published on Grafana.com. There are two areas we review, the metadata for the plugin and the plugin functionality.
+The Grafana team reviews all plugins that are published on argos.goback.world. There are two areas we review, the metadata for the plugin and the plugin functionality.
 
 ## Metadata
 
-The plugin metadata consists of a `plugin.json` file and the README.md file. These `plugin.json` file is used by Grafana to load the plugin and the README.md file is shown in the plugins section of Grafana and the plugins section of Grafana.com.
+The plugin metadata consists of a `plugin.json` file and the README.md file. These `plugin.json` file is used by Grafana to load the plugin and the README.md file is shown in the plugins section of Grafana and the plugins section of argos.goback.world.
 
 ### README.md
 
-The README.md file is shown on the plugins page in Grafana and the plugin page on Grafana.com. There are some differences between the GitHub markdown and the markdown allowed in Grafana/Grafana.com:
+The README.md file is shown on the plugins page in Grafana and the plugin page on argos.goback.world. There are some differences between the GitHub markdown and the markdown allowed in Grafana/argos.goback.world:
 
 - Cannot contain inline HTML.
 - Any image links should be absolute links. For example: https://raw.githubusercontent.com/grafana/azure-monitor-datasource/master/dist/img/grafana_cloud_install.png

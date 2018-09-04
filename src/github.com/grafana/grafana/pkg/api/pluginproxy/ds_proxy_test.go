@@ -218,7 +218,7 @@ func TestDSRouteRule(t *testing.T) {
 
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "/render")
 
-			requestURL, _ := url.Parse("http://grafana.com/sub")
+			requestURL, _ := url.Parse("http://argos.goback.world/sub")
 			req := http.Request{URL: requestURL}
 
 			proxy.getDirector()(&req)
@@ -243,7 +243,7 @@ func TestDSRouteRule(t *testing.T) {
 			ctx := &m.ReqContext{}
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "")
 
-			requestURL, _ := url.Parse("http://grafana.com/sub")
+			requestURL, _ := url.Parse("http://argos.goback.world/sub")
 			req := http.Request{URL: requestURL}
 
 			proxy.getDirector()(&req)
@@ -273,7 +273,7 @@ func TestDSRouteRule(t *testing.T) {
 			ctx := &m.ReqContext{}
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "")
 
-			requestURL, _ := url.Parse("http://grafana.com/sub")
+			requestURL, _ := url.Parse("http://argos.goback.world/sub")
 			req := http.Request{URL: requestURL, Header: make(http.Header)}
 			cookies := "grafana_user=admin; grafana_remember=99; grafana_sess=11; JSESSION_ID=test"
 			req.Header.Set("Cookie", cookies)
@@ -299,7 +299,7 @@ func TestDSRouteRule(t *testing.T) {
 			ctx := &m.ReqContext{}
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "")
 
-			requestURL, _ := url.Parse("http://grafana.com/sub")
+			requestURL, _ := url.Parse("http://argos.goback.world/sub")
 			req := http.Request{URL: requestURL, Header: make(http.Header)}
 			cookies := "grafana_user=admin; grafana_remember=99; grafana_sess=11; JSESSION_ID=test"
 			req.Header.Set("Cookie", cookies)
@@ -341,7 +341,7 @@ func TestDSRouteRule(t *testing.T) {
 			ctx := &m.ReqContext{}
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "")
 
-			requestURL, _ := url.Parse("http://grafana.com/sub")
+			requestURL, _ := url.Parse("http://argos.goback.world/sub")
 			req := http.Request{URL: requestURL, Header: make(http.Header)}
 			proxy.getDirector()(&req)
 

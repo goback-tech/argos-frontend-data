@@ -7,7 +7,7 @@
     "description": "PostgreSQL 데이터 소스",
     "author": {
       "name": "Argos Project",
-      "url": "https://grafana.com"
+      "url": "https://argos.goback.world"
     },
     "logos": {
       "small": "img/postgresql_logo.svg",

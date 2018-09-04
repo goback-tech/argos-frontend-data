@@ -12,7 +12,7 @@
     "description": "OpenTSDB Data Source for Grafana",
     "author": {
       "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "url": "https://argos.goback.world"
     },
     "logos": {
       "small": "img/opentsdb_logo.png",

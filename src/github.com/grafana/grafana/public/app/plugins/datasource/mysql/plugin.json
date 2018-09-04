@@ -7,7 +7,7 @@
     "description": "MySQL 데이터소스",
     "author": {
       "name": "Argos Project",
-      "url": "https://grafana.com"
+      "url": "https://argos.goback.world"
     },
     "logos": {
       "small": "img/mysql_logo.svg",

@@ -98,7 +98,7 @@ func (this *VictoropsNotifier) Notify(evalContext *alerting.EvalContext) error {
 	bodyJSON.Set("timestamp", time.Now().Unix())
 	bodyJSON.Set("state_start_time", evalContext.StartTime.Unix())
 	bodyJSON.Set("state_message", evalContext.Rule.Message)
-	bodyJSON.Set("monitoring_tool", "Grafana v"+setting.BuildVersion)
+	bodyJSON.Set("monitoring_tool", "ARGOS FRONTEND-DATA v"+setting.BuildVersion)
 	bodyJSON.Set("alert_url", ruleUrl)
 
 	if evalContext.ImagePublicUrl != "" {

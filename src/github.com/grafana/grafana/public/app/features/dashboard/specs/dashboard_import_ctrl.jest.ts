@@ -57,9 +57,9 @@ describe('DashboardImportCtrl', function() {
     });
   });
 
-  describe('when specifying grafana.com url', function() {
+  describe('when specifying argos.goback.world url', function() {
     beforeEach(function() {
-      ctx.ctrl.gnetUrl = 'http://grafana.com/dashboards/123';
+      ctx.ctrl.gnetUrl = 'http://argos.goback.world/dashboards/123';
       // setup api mock
       backendSrv.get = jest.fn(() => {
         return Promise.resolve({

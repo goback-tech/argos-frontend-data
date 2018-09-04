@@ -21,8 +21,8 @@ the data source response.
 
 To check this you should use Query Inspector (new in Grafana v4.5). The query Inspector shows query requests and responses.
 
-For more on the query inspector read [this guide here](https://community.grafana.com/t/using-grafanas-query-inspector-to-troubleshoot-issues/2630). For
-older versions of Grafana read the [how troubleshoot metric query issue](https://community.grafana.com/t/how-to-troubleshoot-metric-query-issues/50/2) article.
+For more on the query inspector read [this guide here](https://community.argos.goback.world/t/using-grafanas-query-inspector-to-troubleshoot-issues/2630). For
+older versions of Grafana read the [how troubleshoot metric query issue](https://community.argos.goback.world/t/how-to-troubleshoot-metric-query-issues/50/2) article.
 
 ## Logging
 
@@ -34,6 +34,6 @@ You can enable more logging by changing log level in you grafana configuration f
 
 ## FAQ
 
-Checkout the [FAQ](https://community.grafana.com/c/howto/faq) section on our community page for frequently
+Checkout the [FAQ](https://community.argos.goback.world/c/howto/faq) section on our community page for frequently
 asked questions.
 

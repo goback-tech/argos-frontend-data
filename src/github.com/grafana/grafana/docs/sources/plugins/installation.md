@@ -17,7 +17,7 @@ Grafana already have a strong community of contributors and plugin developers.
 By making it easier to develop and install plugins we hope that the community
 can grow even stronger and develop new plugins that we would never think about.
 
-To discover plugins checkout the official [Plugin Repository](https://grafana.com/plugins).
+To discover plugins checkout the official [Plugin Repository](https://argos.goback.world/plugins).
 
 # Installing Plugins
 
@@ -68,22 +68,22 @@ grafana-cli plugins remove <plugin-id>
 
 If your Grafana Server does not have access to the Internet, then the plugin will have to downloaded and manually copied to your Grafana Server.
 
-The Download URL from Grafana.com API is in this form:
+The Download URL from argos.goback.world API is in this form:
 
-`https://grafana.com/api/plugins/<plugin id>/versions/<version number>/download`
+`https://argos.goback.world/api/plugins/<plugin id>/versions/<version number>/download`
 
 You can specify a local URL by using the `--pluginUrl` option.
 ```bash
 grafana-cli --pluginUrl https://nexus.company.com/grafana/plugins/<plugin-id>-<plugin-version>.zip plugins install <plugin-id>
 ```
 
-To manually install a Plugin via the Grafana.com API:
+To manually install a Plugin via the argos.goback.world API:
 
-1. Find the plugin you want to download, the plugin id can be found on the Installation Tab on the plugin's page on Grafana.com. In this example, the plugin id is `jdbranham-diagram-panel`:
+1. Find the plugin you want to download, the plugin id can be found on the Installation Tab on the plugin's page on argos.goback.world. In this example, the plugin id is `jdbranham-diagram-panel`:
 
     {{< imgbox img="/img/docs/installation-tab.png" caption="Installation Tab" >}}
 
-2. Use the Grafana API to find the plugin using this url `https://grafana.com/api/plugins/<plugin id from step 1>`. For example: https://grafana.com/api/plugins/jdbranham-diagram-panel should return:
+2. Use the Grafana API to find the plugin using this url `https://argos.goback.world/api/plugins/<plugin id from step 1>`. For example: https://argos.goback.world/api/plugins/jdbranham-diagram-panel should return:
     ```bash
     {
       "id": 145,
@@ -104,6 +104,6 @@ To manually install a Plugin via the Grafana.com API:
     }
     ```
 
-4. Download the plugin with `https://grafana.com/api/plugins/<plugin id from step 1>/versions/<current version>/download` (for example: https://grafana.com/api/plugins/jdbranham-diagram-panel/versions/1.4.0/download). Unzip the downloaded file into the Grafana Server's `plugins` directory.
+4. Download the plugin with `https://argos.goback.world/api/plugins/<plugin id from step 1>/versions/<current version>/download` (for example: https://argos.goback.world/api/plugins/jdbranham-diagram-panel/versions/1.4.0/download). Unzip the downloaded file into the Grafana Server's `plugins` directory.
 
 5. Restart the Grafana Server.

@@ -13,7 +13,7 @@ This guide has two parts. The first part describes the metadata and the second p
 
 ## Metadata
 
-The plugin metadata consists of a plugin.json file and the README.md file. These two files are used by Grafana and Grafana.com.
+The plugin metadata consists of a plugin.json file and the README.md file. These two files are used by Grafana and argos.goback.world.
 
 ### Plugin.json (mandatory)
 

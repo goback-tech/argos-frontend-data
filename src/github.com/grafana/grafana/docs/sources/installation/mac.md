@@ -79,7 +79,7 @@ The default sqlite database is located at `/usr/local/var/lib/grafana`
 
 ## Installing from binary tar file
 
-Download [the latest `.tar.gz` file](https://grafana.com/get) and
+Download [the latest `.tar.gz` file](https://argos.goback.world/get) and
 extract it.  This will extract into a folder named after the version you
 downloaded. This folder contains all files required to run Grafana.  There are
 no init scripts or install scripts in this package.

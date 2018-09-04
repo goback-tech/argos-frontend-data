@@ -17,11 +17,11 @@ const template = `
     <div class="p-t-1">
       <div class="gf-form-group" ng-if="ctrl.timeChange || ctrl.variableValueChange">
 		    <gf-form-switch class="gf-form"
-			    label="Save current time range" ng-if="ctrl.timeChange" label-class="width-12" switch-class="max-width-6"
+			    label="현재 시간범위 저장" ng-if="ctrl.timeChange" label-class="width-12" switch-class="max-width-6"
 			    checked="ctrl.saveTimerange" on-change="buildUrl()">
 		    </gf-form-switch>
 		    <gf-form-switch class="gf-form"
-			    label="Save current variables" ng-if="ctrl.variableValueChange" label-class="width-12" switch-class="max-width-6"
+			    label="현재 변수 저장" ng-if="ctrl.variableValueChange" label-class="width-12" switch-class="max-width-6"
 			    checked="ctrl.saveVariables" on-change="buildUrl()">
 		    </gf-form-switch>
 	    </div>

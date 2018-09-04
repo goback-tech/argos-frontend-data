@@ -43,23 +43,23 @@ describe('ShareModalCtrl', function() {
     });
 
     it('should generate render url', function() {
-      ctx.$location.$$absUrl = 'http://dashboards.grafana.com/d/abcdefghi/my-dash';
+      ctx.$location.$$absUrl = 'http://dashboards.argos.goback.world/d/abcdefghi/my-dash';
 
       ctx.scope.panel = { id: 22 };
 
       ctx.scope.init();
-      var base = 'http://dashboards.grafana.com/render/d-solo/abcdefghi/my-dash';
+      var base = 'http://dashboards.argos.goback.world/render/d-solo/abcdefghi/my-dash';
       var params = '?from=1000&to=2000&orgId=1&panelId=22&width=1000&height=500&tz=UTC';
       expect(ctx.scope.imageUrl).to.contain(base + params);
     });
 
     it('should generate render url for scripted dashboard', function() {
-      ctx.$location.$$absUrl = 'http://dashboards.grafana.com/dashboard/script/my-dash.js';
+      ctx.$location.$$absUrl = 'http://dashboards.argos.goback.world/dashboard/script/my-dash.js';
 
       ctx.scope.panel = { id: 22 };
 
       ctx.scope.init();
-      var base = 'http://dashboards.grafana.com/render/dashboard-solo/script/my-dash.js';
+      var base = 'http://dashboards.argos.goback.world/render/dashboard-solo/script/my-dash.js';
       var params = '?from=1000&to=2000&orgId=1&panelId=22&width=1000&height=500&tz=UTC';
       expect(ctx.scope.imageUrl).to.contain(base + params);
     });

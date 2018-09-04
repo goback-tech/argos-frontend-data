@@ -18,6 +18,6 @@ weight = 1
 - [Installing on Windows](windows)
 - [Installing on Docker](docker)
 - [Installing using Provisioning (Chef, Puppet, Salt, Ansible, etc)](provisioning)
-- [Nightly Builds](https://grafana.com/grafana/download)
+- [Nightly Builds](https://argos.goback.world/grafana/download)
 
 

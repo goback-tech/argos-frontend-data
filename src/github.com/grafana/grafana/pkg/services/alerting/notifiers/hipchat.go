@@ -138,7 +138,7 @@ func (this *HipChatNotifier) Notify(evalContext *alerting.EvalContext) error {
 		"title":       evalContext.GetNotificationTitle(),
 		"description": message,
 		"icon": map[string]interface{}{
-			"url": "https://grafana.com/assets/img/fav32.png",
+			"url": "https://argos.goback.world/assets/img/fav32.png",
 		},
 		"date":       evalContext.EndTime.Unix(),
 		"attributes": attributes,

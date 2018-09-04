@@ -7,7 +7,7 @@
     "description": "히트맵 패널",
     "author": {
       "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "url": "https://argos.goback.world"
     },
     "logos": {
       "small": "img/icn-heatmap-panel.svg",

@@ -16,7 +16,7 @@
     "description": "InfluxDB 데이터소스",
     "author": {
       "name": "Argos Project",
-      "url": "https://grafana.com"
+      "url": "https://argos.goback.world"
     },
     "logos": {
       "small": "img/influxdb_logo.svg",

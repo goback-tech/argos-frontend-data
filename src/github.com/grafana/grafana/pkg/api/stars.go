@@ -13,14 +13,14 @@ func StarDashboard(c *m.ReqContext) Response {
 	cmd := m.StarDashboardCommand{UserId: c.UserId, DashboardId: c.ParamsInt64(":id")}
 
 	if cmd.DashboardId <= 0 {
-		return Error(400, "Missing dashboard id", nil)
+		return Error(400, "대쉬보드 아이디가 없습니다", nil)
 	}
 
 	if err := bus.Dispatch(&cmd); err != nil {
-		return Error(500, "Failed to star dashboard", err)
+		return Error(500, "대쉬보드 즐겨찾기 실패", err)
 	}
 
-	return Success("Dashboard starred!")
+	return Success("대쉬보드 즐겨찾기 완료!")
 }
 
 func UnstarDashboard(c *m.ReqContext) Response {
@@ -35,5 +35,5 @@ func UnstarDashboard(c *m.ReqContext) Response {
 		return Error(500, "Failed to unstar dashboard", err)
 	}
 
-	return Success("Dashboard unstarred")
+	return Success("대쉬보드 즐겨찾기 해제")
 }

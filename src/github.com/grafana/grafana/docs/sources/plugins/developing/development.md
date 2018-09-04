@@ -10,7 +10,7 @@ weight = 1
 
 # Developer Guide
 
-You can extend Grafana by writing your own plugins and then share then with other users in [our plugin repository](https://grafana.com/plugins).
+You can extend Grafana by writing your own plugins and then share then with other users in [our plugin repository](https://argos.goback.world/plugins).
 
 ## Short version
 
@@ -27,8 +27,8 @@ Example plugins
 
 There are two blog posts about authoring a plugin that might also be of interest to any plugin authors.
 
-- [Timing is Everything. Writing the Clock Panel Plugin for Grafana](https://grafana.com/blog/2016/04/08/timing-is-everything.-writing-the-clock-panel-plugin-for-grafana-3.0/)
-- [Timing is Everything. Editor Mode in Grafana for the Clock Panel Plugin](https://grafana.com/blog/2016/04/15/timing-is-everything.-editor-mode-in-grafana-3.0-for-the-clock-panel-plugin/).
+- [Timing is Everything. Writing the Clock Panel Plugin for Grafana](https://argos.goback.world/blog/2016/04/08/timing-is-everything.-writing-the-clock-panel-plugin-for-grafana-3.0/)
+- [Timing is Everything. Editor Mode in Grafana for the Clock Panel Plugin](https://argos.goback.world/blog/2016/04/15/timing-is-everything.-editor-mode-in-grafana-3.0-for-the-clock-panel-plugin/).
 
 ## What languages?
 

@@ -10,4 +10,4 @@ Read more about it here:
 
 Graphite 1.1 Release:
 
-[https://grafana.com/blog/2018/01/11/graphite-1.1-teaching-an-old-dog-new-tricks/](https://grafana.com/blog/2018/01/11/graphite-1.1-teaching-an-old-dog-new-tricks/)
+[https://argos.goback.world/blog/2018/01/11/graphite-1.1-teaching-an-old-dog-new-tricks/](https://argos.goback.world/blog/2018/01/11/graphite-1.1-teaching-an-old-dog-new-tricks/)

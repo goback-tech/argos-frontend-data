@@ -66,7 +66,7 @@ class GettingStartedPanelCtrl extends PanelCtrl {
       title: '플러그인 및 어플리케이션 추가',
       cta: '플러그인 리포지토리 검색',
       icon: 'icon-gf icon-gf-apps',
-      href: 'https://grafana.com/plugins?utm_source=grafana_getting_started',
+      href: 'https://argos.goback.world/plugins?utm_source=grafana_getting_started',
       check: () => {
         return this.backendSrv.get('/api/plugins', { embedded: 0, core: 0 }).then(plugins => {
           return plugins.length > 0;

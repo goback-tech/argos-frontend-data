@@ -7,7 +7,7 @@
     "description": "알람 목록과 상태 정보",
     "author": {
       "name": "Argos Project",
-      "url": "https://grafana.com"
+      "url": "https://argos.goback.world"
     },
     "logos": {
       "small": "img/icn-singlestat-panel.svg",
